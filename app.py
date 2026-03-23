@@ -41,6 +41,8 @@ G4 = "#B0B8CB"; G3 = "#C3C9D9"
 W = "#FFFFFF"; BG = "#F4F6F9"
 GR5 = "#2E7D32"; GR4 = "#00C761"
 RED = "#D32F2F"; AMB = "#F59E0B"
+B5_10 = "#E8EEFB"; GR4_10 = "#E8F5E9"; RED_10 = "#FFEBEE"; AMB_10 = "#FFF8E1"
+BAR_BG = "#E2E6ED"
 
 st.set_page_config(page_title="Document Benchmarking", page_icon="📊", layout="wide")
 
@@ -92,7 +94,7 @@ st.markdown(f"""
 
 .br {{ display: flex; align-items: center; gap: 0.6rem; margin: 0.35rem 0; }}
 .br .bn {{ width: 110px; font-size: 0.76rem; font-weight: 600; color: {S4}; }}
-.br .bt {{ flex: 1; height: 20px; background: #E8ECF1; border-radius: 10px; overflow: hidden; }}
+.br .bt {{ flex: 1; height: 20px; background: {BAR_BG}; border-radius: 10px; overflow: hidden; }}
 .br .bf {{ height: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: flex-end; padding-right: 7px; font-size: 0.65rem; font-weight: 700; color: {W}; }}
 
 .fr {{ display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.65rem 1rem; border-radius: 12px; margin: 0.25rem 0; border: 1px solid {G3}; background: {W}; }}
@@ -104,17 +106,17 @@ st.markdown(f"""
 .fr .fs {{ font-size: 0.63rem; color: {G4}; }}
 .badge {{ font-size: 0.58rem; padding: 0.1rem 0.4rem; border-radius: 20px; font-weight: 700; color: {W}; white-space: nowrap; }}
 .bc {{ background: {RED}; }}
-.bj {{ background: #E65100; }}
+.bj {{ background: {S4}; }}
 .bm {{ background: {AMB}; }}
 
 .tt {{ background: {W}; border: 1px solid {G3}; border-radius: 14px; padding: 0.9rem; }}
 .esg-b {{ border-radius: 14px; padding: 1.1rem 1.4rem; margin: 0.6rem 0; }}
-.esg-n {{ background: #FFF8E1; border: 1px solid {AMB}; }}
-.esg-g {{ background: #E8F5E9; border: 1px solid {GR4}; }}
+.esg-n {{ background: {AMB_10}; border: 1px solid {AMB}; }}
+.esg-g {{ background: {GR4_10}; border: 1px solid {GR4}; }}
 .bsc {{ background: {W}; border: 1px solid {G3}; border-radius: 16px; padding: 1.2rem; }}
-.rec {{ background: #E3F2FD; border-left: 4px solid {B5}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {B6}; }}
-.str {{ background: #E8F5E9; border-left: 4px solid {GR4}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {GR5}; }}
-.wk {{ background: #FFEBEE; border-left: 4px solid {RED}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {RED}; }}
+.rec {{ background: {B5_10}; border-left: 4px solid {B5}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {B6}; }}
+.str {{ background: {GR4_10}; border-left: 4px solid {GR4}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {GR5}; }}
+.wk {{ background: {RED_10}; border-left: 4px solid {RED}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {RED}; }}
 .sh {{ font-size: 1.05rem; font-weight: 700; color: {B6}; margin: 1.2rem 0 0.4rem; padding-bottom: 0.4rem; border-bottom: 2px solid {G3}; }}
 
 /* Auth cards */
@@ -133,7 +135,7 @@ AUDIENCES = ["Retail","Professional / Advisor","Institutional"]
 PEER_SET = ["BlackRock","Vanguard","Fidelity","J.P. Morgan AM","Goldman Sachs AM","PIMCO","Schroders","UBS AM","Amundi","Capital Group"]
 DIM_ORDER = ["clarity","transparency","design","accessibility","compliance","usability"]
 PILLAR_ORDER = ["completeness","consistency","compliance_pillar","quality","data_integrity"]
-PCOL = {"completeness":B5,"consistency":"#7C3AED","compliance_pillar":GR4,"quality":AMB,"data_integrity":"#0891B2"}
+PCOL = {"completeness":B5,"consistency":S4,"compliance_pillar":GR4,"quality":AMB,"data_integrity":G4}
 
 # ═══════════════════════════════════════════════════════════════════════════
 # Session state + auto-login from persisted token
@@ -733,7 +735,7 @@ with main_tabs[1]:
 
     with detail_tabs[6]:
         st.markdown(f'<div class="sh">Balanced Scorecard</div>', unsafe_allow_html=True)
-        bsc_data = [("👤","Customer",B5,["Clarity","Usability","Accessibility"],["clarity","usability","accessibility"]),("⚙️","Internal Process","#7C3AED",["Compliance","Consistency","Governance"],["compliance"]),("🌱","Learning & Growth",GR4,["ESG depth","Innovation","Thought leadership"],[]),("💰","Financial",AMB,["Efficiency","Scalability","Cost"],[]),]
+        bsc_data = [("👤","Customer",B5,["Clarity","Usability","Accessibility"],["clarity","usability","accessibility"]),("⚙️","Internal Process",S4,["Compliance","Consistency","Governance"],["compliance"]),("🌱","Learning & Growth",GR4,["ESG depth","Innovation","Thought leadership"],[]),("💰","Financial",AMB,["Efficiency","Scalability","Cost"],[]),]
         bc1,bc2 = st.columns(2)
         for i,(icon,title,col,metrics,dim_ids) in enumerate(bsc_data):
             with (bc1 if i%2==0 else bc2):
