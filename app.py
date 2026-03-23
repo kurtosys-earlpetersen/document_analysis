@@ -435,10 +435,8 @@ with st.sidebar:
     audience = st.selectbox("Target audience", AUDIENCES)
     st.markdown("---")
     st.markdown("**Peer benchmark set**")
-    pc1, pc2 = st.columns(2)
-    for i, p in enumerate(PEER_SET):
-        with (pc1 if i % 2 == 0 else pc2):
-            st.caption(f"◆ {p}")
+    for p in PEER_SET:
+        st.caption(f"◆ {p}")
 
 # ═══════════════════════════════════════════════════════════════════════════
 # Header
