@@ -517,45 +517,57 @@ if not st.session_state.analyses and not uploaded_files:
 # ═══════════════════════════════════════════════════════════════════════════
 # PDF helper
 # ═══════════════════════════════════════════════════════════════════════════
+def _sanitize(text: str) -> str:
+    """Replace Unicode characters that Helvetica can't render."""
+    return text.replace("\u2014", "-").replace("\u2013", "-").replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"').replace("\u2026", "...").replace("\u2022", "*").replace("\u2192", "->").replace("\u2713", "[ok]").replace("\u2717", "[x]")
+
 def gen_pdf(e: dict) -> bytes:
     pdf = FPDF(); pdf.add_page(); pdf.set_auto_page_break(auto=True, margin=15)
+    _use_unicode = False
     _sys_fonts = Path("/System/Library/Fonts/Supplemental")
     _arial_uni = _sys_fonts / "Arial Unicode.ttf"
     _arial_bold = _sys_fonts / "Arial Bold.ttf"
+    _linux_font = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
     if _arial_uni.exists():
         pdf.add_font("arialuni", "", str(_arial_uni), uni=True)
         pdf.add_font("arialuni", "B", str(_arial_bold if _arial_bold.exists() else _arial_uni), uni=True)
-        F = "arialuni"
+        F = "arialuni"; _use_unicode = True
+    elif _linux_font.exists():
+        pdf.add_font("dejavu", "", str(_linux_font), uni=True)
+        _bold = _linux_font.parent / "DejaVuSans-Bold.ttf"
+        pdf.add_font("dejavu", "B", str(_bold if _bold.exists() else _linux_font), uni=True)
+        F = "dejavu"; _use_unicode = True
     else:
         F = "Helvetica"
-    pdf.set_font(F,"B",18); pdf.cell(0,12,"Document Benchmarking Report",new_x="LMARGIN",new_y="NEXT")
-    pdf.set_font(F,"",10); pdf.cell(0,6,f"File: {e['filename']}  |  Type: {e['doc_type']}  |  Jurisdiction: {e['jurisdiction']}  |  Date: {e['analysed_at']}",new_x="LMARGIN",new_y="NEXT")
-    pdf.ln(6); pdf.set_font(F,"B",13); pdf.cell(0,8,"Scores",new_x="LMARGIN",new_y="NEXT")
-    pdf.set_font(F,"",10); pdf.cell(0,6,f"Overall: {e['overall']:.1f}/5   |   Compliance: {e['compliance_pct']:.0f}%   |   Accessibility: {e['accessibility_pct']:.0f}%   |   ESG: {e['esg_coverage']:.0f}%",new_x="LMARGIN",new_y="NEXT")
+    S = (lambda t: t) if _use_unicode else _sanitize
+    pdf.set_font(F,"B",18); pdf.cell(0,12,S("Document Benchmarking Report"),new_x="LMARGIN",new_y="NEXT")
+    pdf.set_font(F,"",10); pdf.cell(0,6,S(f"File: {e['filename']}  |  Type: {e['doc_type']}  |  Jurisdiction: {e['jurisdiction']}  |  Date: {e['analysed_at']}"),new_x="LMARGIN",new_y="NEXT")
+    pdf.ln(6); pdf.set_font(F,"B",13); pdf.cell(0,8,S("Scores"),new_x="LMARGIN",new_y="NEXT")
+    pdf.set_font(F,"",10); pdf.cell(0,6,S(f"Overall: {e['overall']:.1f}/5   |   Compliance: {e['compliance_pct']:.0f}%   |   Accessibility: {e['accessibility_pct']:.0f}%   |   ESG: {e['esg_coverage']:.0f}%"),new_x="LMARGIN",new_y="NEXT")
     pdf.ln(4)
     dims = e.get("bm_dims",{})
     if dims:
-        pdf.set_font(F,"B",12); pdf.cell(0,8,"Dimensions (1-5)",new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",10)
+        pdf.set_font(F,"B",12); pdf.cell(0,8,S("Dimensions (1-5)"),new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",10)
         for did in DIM_ORDER:
             d = dims.get(did,{})
-            pdf.cell(0,6,f"  {d.get('label','')}: {d.get('score',0):.1f}",new_x="LMARGIN",new_y="NEXT")
+            pdf.cell(0,6,S(f"  {d.get('label','')}: {d.get('score',0):.1f}"),new_x="LMARGIN",new_y="NEXT")
     cr = e.get("cr",{})
     if cr.get("results"):
-        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,"Compliance",new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
+        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,S("Compliance"),new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
         for r in cr["results"]:
             st_txt = "PASS" if r.get("passed") else "FAIL"
-            pdf.cell(0,5,f"  [{st_txt}] {r.get('name','')} - {r.get('message','')}",new_x="LMARGIN",new_y="NEXT")
+            pdf.cell(0,5,S(f"  [{st_txt}] {r.get('name','')} - {r.get('message','')}"),new_x="LMARGIN",new_y="NEXT")
     ar = e.get("ar",{})
     if ar.get("results"):
-        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,"Accessibility",new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
+        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,S("Accessibility"),new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
         for r in ar["results"]:
             st_txt = "PASS" if r.get("passed") else "FAIL"
-            pdf.cell(0,5,f"  [{st_txt}] {r.get('name',r.get('check',''))} - {r.get('message','')}",new_x="LMARGIN",new_y="NEXT")
+            pdf.cell(0,5,S(f"  [{st_txt}] {r.get('name',r.get('check',''))} - {r.get('message','')}"),new_x="LMARGIN",new_y="NEXT")
     recs = e.get("bm_recommendations",[])
     if recs:
-        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,"Recommendations",new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
+        pdf.ln(4); pdf.set_font(F,"B",12); pdf.cell(0,8,S("Recommendations"),new_x="LMARGIN",new_y="NEXT"); pdf.set_font(F,"",9)
         for r in recs:
-            pdf.cell(0,5,f"  > {r}",new_x="LMARGIN",new_y="NEXT")
+            pdf.cell(0,5,S(f"  > {r}"),new_x="LMARGIN",new_y="NEXT")
     return bytes(pdf.output())
 
 # ═══════════════════════════════════════════════════════════════════════════
