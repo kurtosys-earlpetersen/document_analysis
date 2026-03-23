@@ -49,6 +49,9 @@ st.set_page_config(page_title="Document Benchmarking", page_icon="📊", layout=
 # ═══════════════════════════════════════════════════════════════════════════
 # CSS
 # ═══════════════════════════════════════════════════════════════════════════
+_SH = "0 2px 12px rgba(7,25,53,0.06)"
+_SH2 = "0 4px 24px rgba(7,25,53,0.08)"
+
 st.markdown(f"""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -58,71 +61,92 @@ st.markdown(f"""
 [data-testid="stTextInput"] input, [data-testid="stNumberInput"] input {{
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }}
-.block-container {{ padding: 1rem 2rem 2rem; max-width: 1440px; background: {BG}; }}
+.block-container {{ padding: 1.5rem 2.5rem 2.5rem; max-width: 1440px; background: {BG}; }}
 [data-testid="stAppViewContainer"] {{ background: {BG}; }}
 
-/* Sidebar */
-[data-testid="stSidebar"] {{ background: {B6}; }}
-[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3,
+/* ── Sidebar: white, clean, Aurora-style ── */
+[data-testid="stSidebar"] {{ background: {W}; border-right: 1px solid {G3}; }}
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {{ color: {B6} !important; }}
 [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label,
-[data-testid="stSidebar"] .stMarkdown {{ color: {W} !important; }}
-[data-testid="stSidebar"] .stSelectbox label {{ color: {G3} !important; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }}
-[data-testid="stSidebar"] div[data-baseweb="select"] {{ background: {W} !important; border-radius: 10px !important; border: none !important; }}
-[data-testid="stSidebar"] div[data-baseweb="select"] span {{ color: {S4} !important; font-weight: 500 !important; }}
+[data-testid="stSidebar"] .stMarkdown {{ color: {S4} !important; }}
+[data-testid="stSidebar"] .stSelectbox label {{ color: {G4} !important; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }}
+[data-testid="stSidebar"] div[data-baseweb="select"] {{ background: {BG} !important; border-radius: 12px !important; border: 1px solid {G3} !important; }}
+[data-testid="stSidebar"] div[data-baseweb="select"] span {{ color: {B6} !important; font-weight: 500 !important; }}
 [data-testid="stSidebar"] div[data-baseweb="select"] svg {{ fill: {G4} !important; }}
-[data-testid="stSidebar"] [data-testid="stTextInput"] input {{ background: {W} !important; color: {S4} !important; border-radius: 10px !important; border: 1px solid {G3} !important; }}
-[data-testid="stSidebar"] button {{ border-radius: 10px !important; background: {W} !important; color: {B6} !important; font-weight: 600 !important; border: 1px solid {G3} !important; }}
-[data-testid="stSidebar"] button:hover {{ background: {G3} !important; }}
+[data-testid="stSidebar"] [data-testid="stTextInput"] input {{ background: {BG} !important; color: {B6} !important; border-radius: 12px !important; border: 1px solid {G3} !important; }}
+[data-testid="stSidebar"] button {{ border-radius: 12px !important; background: {BG} !important; color: {B6} !important; font-weight: 600 !important; border: 1px solid {G3} !important; transition: all 0.15s ease; }}
+[data-testid="stSidebar"] button:hover {{ background: {B5} !important; color: {W} !important; border-color: {B5} !important; }}
 
-/* Tabs */
-.stTabs [data-baseweb="tab-list"] {{ gap: 0.2rem; background: {W}; border-radius: 14px; padding: 0.3rem; border: 1px solid {G3}; }}
-.stTabs [data-baseweb="tab"] {{ border-radius: 10px; padding: 0.5rem 1rem; font-weight: 600; font-size: 0.78rem; color: {S4}; }}
-.stTabs [aria-selected="true"] {{ background: {B5} !important; color: {W} !important; }}
-.stTabs [data-baseweb="tab-panel"] {{ padding-top: 1.2rem; }}
+/* ── Tabs: pill-style ── */
+.stTabs [data-baseweb="tab-list"] {{ gap: 0.25rem; background: {W}; border-radius: 16px; padding: 0.35rem; box-shadow: {_SH}; border: none; }}
+.stTabs [data-baseweb="tab"] {{ border-radius: 12px; padding: 0.55rem 1.2rem; font-weight: 600; font-size: 0.78rem; color: {S3}; transition: all 0.15s ease; }}
+.stTabs [data-baseweb="tab"]:hover {{ color: {B6}; background: {BG}; }}
+.stTabs [aria-selected="true"] {{ background: {B6} !important; color: {W} !important; box-shadow: 0 2px 8px rgba(7,25,53,0.18); }}
+.stTabs [data-baseweb="tab-panel"] {{ padding-top: 1.5rem; }}
 
-/* Cards */
-.k-card {{ background: {W}; border: 1px solid {G3}; border-radius: 16px; padding: 1.4rem; }}
-.hero-card {{ background: {W}; border: 1px solid {G3}; border-radius: 18px; padding: 1.4rem 1.1rem; text-align: center; }}
-.hero-card .hv {{ font-size: 2.5rem; font-weight: 800; line-height: 1.1; }}
-.hero-card .hl {{ font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: {G4}; margin-bottom: 0.2rem; }}
-.hero-card .hs {{ font-size: 0.76rem; color: {S3}; margin-top: 0.35rem; }}
+/* ── Cards: shadow-first, no hard borders ── */
+.k-card {{ background: {W}; border: none; border-radius: 20px; padding: 1.6rem; box-shadow: {_SH}; }}
+.hero-card {{ background: {W}; border: none; border-radius: 20px; padding: 1.6rem 1.2rem; text-align: center; box-shadow: {_SH}; transition: transform 0.15s ease, box-shadow 0.15s ease; }}
+.hero-card:hover {{ transform: translateY(-2px); box-shadow: {_SH2}; }}
+.hero-card .hv {{ font-size: 2.6rem; font-weight: 800; line-height: 1.1; }}
+.hero-card .hl {{ font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: {G4}; margin-bottom: 0.3rem; }}
+.hero-card .hs {{ font-size: 0.76rem; color: {S3}; margin-top: 0.4rem; }}
 
-.dp {{ background: {W}; border: 1px solid {G3}; border-radius: 14px; padding: 0.9rem; text-align: center; }}
+/* Dimension pills */
+.dp {{ background: {W}; border: none; border-radius: 16px; padding: 1rem; text-align: center; box-shadow: {_SH}; transition: transform 0.15s ease; }}
+.dp:hover {{ transform: translateY(-2px); }}
 .dp .ds {{ font-size: 1.7rem; font-weight: 800; }}
 .dp .dn {{ font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: {S3}; }}
 .dp .dl {{ font-size: 0.65rem; font-weight: 600; }}
 
-.br {{ display: flex; align-items: center; gap: 0.6rem; margin: 0.35rem 0; }}
+/* Pillar bars */
+.br {{ display: flex; align-items: center; gap: 0.6rem; margin: 0.45rem 0; }}
 .br .bn {{ width: 110px; font-size: 0.76rem; font-weight: 600; color: {S4}; }}
-.br .bt {{ flex: 1; height: 20px; background: {BAR_BG}; border-radius: 10px; overflow: hidden; }}
-.br .bf {{ height: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: flex-end; padding-right: 7px; font-size: 0.65rem; font-weight: 700; color: {W}; }}
+.br .bt {{ flex: 1; height: 22px; background: {BAR_BG}; border-radius: 11px; overflow: hidden; }}
+.br .bf {{ height: 100%; border-radius: 11px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-size: 0.65rem; font-weight: 700; color: {W}; }}
 
-.fr {{ display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.65rem 1rem; border-radius: 12px; margin: 0.25rem 0; border: 1px solid {G3}; background: {W}; }}
+/* Finding rows */
+.fr {{ display: flex; align-items: flex-start; gap: 0.7rem; padding: 0.75rem 1.1rem; border-radius: 14px; margin: 0.3rem 0; border: none; background: {W}; box-shadow: {_SH}; }}
 .fr.fp {{ border-left: 4px solid {GR4}; }}
 .fr.ff {{ border-left: 4px solid {RED}; }}
 .fr.fw {{ border-left: 4px solid {AMB}; }}
-.fr .ft {{ font-weight: 600; font-size: 0.8rem; color: {B6}; }}
-.fr .fm {{ font-size: 0.73rem; color: {S3}; }}
-.fr .fs {{ font-size: 0.63rem; color: {G4}; }}
-.badge {{ font-size: 0.58rem; padding: 0.1rem 0.4rem; border-radius: 20px; font-weight: 700; color: {W}; white-space: nowrap; }}
+.fr .ft {{ font-weight: 600; font-size: 0.82rem; color: {B6}; }}
+.fr .fm {{ font-size: 0.74rem; color: {S3}; }}
+.fr .fs {{ font-size: 0.64rem; color: {G4}; }}
+.badge {{ font-size: 0.58rem; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; color: {W}; white-space: nowrap; }}
 .bc {{ background: {RED}; }}
 .bj {{ background: {S4}; }}
 .bm {{ background: {AMB}; }}
 
-.tt {{ background: {W}; border: 1px solid {G3}; border-radius: 14px; padding: 0.9rem; }}
-.esg-b {{ border-radius: 14px; padding: 1.1rem 1.4rem; margin: 0.6rem 0; }}
-.esg-n {{ background: {AMB_10}; border: 1px solid {AMB}; }}
-.esg-g {{ background: {GR4_10}; border: 1px solid {GR4}; }}
-.bsc {{ background: {W}; border: 1px solid {G3}; border-radius: 16px; padding: 1.2rem; }}
-.rec {{ background: {B5_10}; border-left: 4px solid {B5}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {B6}; }}
-.str {{ background: {GR4_10}; border-left: 4px solid {GR4}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {GR5}; }}
-.wk {{ background: {RED_10}; border-left: 4px solid {RED}; border-radius: 0 10px 10px 0; padding: 0.55rem 1rem; margin: 0.25rem 0; font-size: 0.8rem; color: {RED}; }}
-.sh {{ font-size: 1.05rem; font-weight: 700; color: {B6}; margin: 1.2rem 0 0.4rem; padding-bottom: 0.4rem; border-bottom: 2px solid {G3}; }}
+/* Taxonomy tiles */
+.tt {{ background: {W}; border: none; border-radius: 16px; padding: 1rem; box-shadow: {_SH}; }}
 
-/* Auth cards */
-.auth-box {{ max-width: 420px; margin: 3rem auto; background: {W}; border: 1px solid {G3}; border-radius: 20px; padding: 2.5rem 2rem; }}
+/* ESG banners */
+.esg-b {{ border-radius: 16px; padding: 1.2rem 1.5rem; margin: 0.6rem 0; box-shadow: {_SH}; }}
+.esg-n {{ background: {AMB_10}; border: none; }}
+.esg-g {{ background: {GR4_10}; border: none; }}
+
+/* BSC cards */
+.bsc {{ background: {W}; border: none; border-radius: 20px; padding: 1.4rem; box-shadow: {_SH}; }}
+
+/* Insight strips */
+.rec {{ background: {B5_10}; border-left: 4px solid {B5}; border-radius: 0 12px 12px 0; padding: 0.65rem 1.1rem; margin: 0.3rem 0; font-size: 0.82rem; color: {B6}; }}
+.str {{ background: {GR4_10}; border-left: 4px solid {GR4}; border-radius: 0 12px 12px 0; padding: 0.65rem 1.1rem; margin: 0.3rem 0; font-size: 0.82rem; color: {GR5}; }}
+.wk {{ background: {RED_10}; border-left: 4px solid {RED}; border-radius: 0 12px 12px 0; padding: 0.65rem 1.1rem; margin: 0.3rem 0; font-size: 0.82rem; color: {RED}; }}
+
+/* Section header */
+.sh {{ font-size: 1.08rem; font-weight: 700; color: {B6}; margin: 1.4rem 0 0.6rem; padding-bottom: 0.45rem; border-bottom: 2px solid {G3}; }}
+
+/* ── Auth cards ── */
+.auth-box {{ max-width: 440px; margin: 3rem auto; background: {W}; border: none; border-radius: 24px; padding: 2.8rem 2.2rem; box-shadow: {_SH2}; }}
 .auth-box h2 {{ color: {B6}; font-weight: 800; text-align: center; margin-bottom: 0.3rem; }}
 .auth-box .sub {{ color: {S3}; font-size: 0.85rem; text-align: center; margin-bottom: 1.5rem; }}
+
+/* ── Global overrides for a cleaner feel ── */
+[data-testid="stDataFrame"] {{ border-radius: 16px; overflow: hidden; box-shadow: {_SH}; }}
+[data-testid="stMetricValue"] {{ font-weight: 800 !important; color: {B6} !important; }}
+[data-testid="stMetricLabel"] {{ color: {G4} !important; font-weight: 600 !important; text-transform: uppercase; font-size: 0.7rem !important; letter-spacing: 0.05em; }}
+hr {{ border-color: {G3} !important; opacity: 0.5; }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -442,9 +466,14 @@ with st.sidebar:
 # Header
 # ═══════════════════════════════════════════════════════════════════════════
 st.markdown(f"""
-<div style="background:linear-gradient(135deg,{B6} 0%,{S4} 55%,{B5} 100%);border-radius:18px;padding:1.8rem 2.5rem;color:{W};margin-bottom:1.2rem;">
-    <div style="font-size:1.5rem;font-weight:800;letter-spacing:-0.02em">Welcome back, {user['name']}</div>
-    <div style="font-size:0.82rem;opacity:0.75;margin-top:0.3rem">Upload and benchmark your investor-facing and marketing documents.</div>
+<div style="background:{W};border-radius:20px;padding:1.8rem 2.5rem;margin-bottom:1.2rem;box-shadow:{_SH};display:flex;align-items:center;justify-content:space-between;">
+    <div>
+        <div style="font-size:1.5rem;font-weight:800;color:{B6};letter-spacing:-0.02em">Dashboard</div>
+        <div style="font-size:0.82rem;color:{G4};margin-top:0.25rem">Dashboard / Overview</div>
+    </div>
+    <div style="background:{B6};color:{W};padding:0.5rem 1.2rem;border-radius:12px;font-size:0.8rem;font-weight:600">
+        {user['name']}
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -506,7 +535,7 @@ if uploaded_files:
 
 if not st.session_state.analyses and not uploaded_files:
     st.markdown(f"""
-    <div style="text-align:center;padding:3rem 2rem;background:{W};border:2px dashed {G3};border-radius:18px;margin-top:1rem">
+    <div style="text-align:center;padding:3.5rem 2rem;background:{W};border:2px dashed {G3};border-radius:24px;margin-top:1rem;box-shadow:{_SH}">
         <div style="font-size:2.5rem">📄</div>
         <div style="font-size:1rem;font-weight:700;color:{B6};margin-top:0.5rem">Upload PDF or Word documents</div>
         <div style="font-size:0.8rem;color:{G4};margin-top:0.3rem">Upload multiple files. Each will be analysed and saved to your library.</div>
