@@ -1,0 +1,55 @@
+# Aligned with Document Benchmarking Project.pdf — evaluation dimensions & BSC mapping.
+# Used as reference for future scoring (1–5) and reporting (radar, heatmaps).
+
+benchmarking_dimensions:
+  - id: clarity
+    name: Clarity
+    criteria: ["plain language", "readability"]
+    score_min: 1
+    score_max: 5
+  - id: transparency
+    name: Transparency
+    criteria: ["completeness of disclosures"]
+    score_min: 1
+    score_max: 5
+  - id: design
+    name: Design
+    criteria: ["layout", "hierarchy", "visuals"]
+    score_min: 1
+    score_max: 5
+  - id: accessibility
+    name: Accessibility
+    criteria: ["screen reader support", "contrast", "tagging"]
+    score_min: 1
+    score_max: 5
+  - id: compliance
+    name: Compliance
+    criteria: ["regulatory alignment"]
+    score_min: 1
+    score_max: 5
+  - id: usability
+    name: Usability
+    criteria: ["navigation", "structure"]
+    score_min: 1
+    score_max: 5
+
+balanced_scorecard:
+  customer: ["clarity", "usability", "accessibility"]
+  internal_processes: ["production efficiency", "consistency"]
+  learning_growth: ["innovation in communication", "ESG integration"]
+  financial: ["cost efficiency", "scalability"]
+
+scoring_scale:
+  poor: 1
+  adequate: 3
+  best_in_class: 5
+
+taxonomy_categories:
+  - fund_overview
+  - performance
+  - portfolio
+  - fees
+  - risk
+  - esg
+  - disclosures
+  - operational

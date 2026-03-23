@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-analysis-tool"
+version = "0.1.0"
+description = "Analyse asset manager marketing documents for compliance, legislation adherence, and accessibility."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.23.0",
+    "python-docx>=1.1.0",
+    "PyYAML>=6.0.1",
+    "axe-selenium-python>=4.0.0",
+    "selenium>=4.15.0",
+    "sqlalchemy>=2.0.23",
+    "click>=8.1.7",
+    "rich>=13.7.0",
+    "beautifulsoup4>=4.12.2",
+]
+
+[project.scripts]
+doc-analyze = "document_analysis_tool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

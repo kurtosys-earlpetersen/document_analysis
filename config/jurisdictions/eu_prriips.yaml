@@ -1,0 +1,57 @@
+# EU PRIIPs KID – example compliance rules
+# Extend with more sections and required phrases per regulation.
+
+name: EU PRIIPs
+jurisdiction: EU
+document_types:
+  - kid
+  - key_information_document
+
+rules:
+  - id: required_section_what_is_this_product
+    name: "Section: What is this product?"
+    type: required_section
+    keywords:
+      - "what is this product"
+      - "what is this investment"
+    severity: high
+
+  - id: required_section_risk
+    name: "Section: Risk"
+    type: required_section
+    keywords:
+      - "risk"
+      - "risk indicator"
+      - "summary risk indicator"
+    severity: high
+
+  - id: required_section_costs
+    name: "Section: Costs"
+    type: required_section
+    keywords:
+      - "costs"
+      - "one-off costs"
+      - "ongoing costs"
+    severity: high
+
+  - id: required_section_complaints
+    name: "Section: Complaints"
+    type: required_section
+    keywords:
+      - "complaint"
+      - "complaints"
+    severity: medium
+
+  - id: required_disclaimer_past_performance
+    name: "Disclaimer: Past performance"
+    type: required_phrase
+    phrases:
+      - "past performance"
+      - "past performance is not a reliable indicator of future results"
+    severity: high
+
+  - id: min_word_count
+    name: "Minimum content length"
+    type: min_length
+    min_chars: 500
+    severity: low

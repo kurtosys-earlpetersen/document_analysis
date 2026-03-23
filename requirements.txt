@@ -1,0 +1,27 @@
+# Document parsing
+pymupdf>=1.23.0
+python-docx>=1.1.0
+
+# Config and data
+PyYAML>=6.0.1
+
+# Accessibility (HTML)
+axe-selenium-python>=2.0.0
+selenium>=4.15.0
+
+# Metrics and reporting
+sqlalchemy>=2.0.23
+
+# CLI and utilities
+click>=8.1.7
+rich>=13.7.0
+
+# Optional: HTML parsing for embedded/inline content
+beautifulsoup4>=4.12.2
+
+# Web UI (preview)
+streamlit>=1.29.0
+plotly>=5.18.0
+pandas>=2.1.0
+fpdf2>=2.7.0
+bcrypt>=4.1.0

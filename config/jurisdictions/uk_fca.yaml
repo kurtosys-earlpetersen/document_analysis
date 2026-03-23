@@ -1,0 +1,43 @@
+# UK FCA – example rules for key information documents
+
+name: UK FCA
+jurisdiction: UK
+document_types:
+  - kid
+  - key_information_document
+
+rules:
+  - id: required_section_what_is_this_product
+    name: "Section: What is this product?"
+    type: required_section
+    keywords:
+      - "what is this product"
+    severity: high
+
+  - id: required_section_risk
+    name: "Section: Risk"
+    type: required_section
+    keywords:
+      - "risk"
+      - "summary risk indicator"
+    severity: high
+
+  - id: required_section_costs
+    name: "Section: Costs"
+    type: required_section
+    keywords:
+      - "costs"
+    severity: high
+
+  - id: required_disclaimer_past_performance
+    name: "Disclaimer: Past performance"
+    type: required_phrase
+    phrases:
+      - "past performance is not a reliable indicator"
+    severity: high
+
+  - id: min_word_count
+    name: "Minimum content length"
+    type: min_length
+    min_chars: 400
+    severity: low

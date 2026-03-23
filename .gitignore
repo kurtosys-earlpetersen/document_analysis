@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.json
+!config/**/*.yaml
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+data/
+.session_token
+*.pdf
+*.html
+*.sql
+echarts-thousands-separator.md

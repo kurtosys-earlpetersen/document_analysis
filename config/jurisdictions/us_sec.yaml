@@ -1,0 +1,39 @@
+# US SEC – example rules for fund marketing / prospectus-style content
+
+name: US SEC
+jurisdiction: US
+document_types:
+  - prospectus
+  - fact_sheet
+  - advertisement
+
+rules:
+  - id: required_risk_disclosure
+    name: "Risk disclosure"
+    type: required_section
+    keywords:
+      - "risk"
+      - "investment risk"
+    severity: high
+
+  - id: required_section_costs
+    name: "Section: Fees and expenses"
+    type: required_section
+    keywords:
+      - "fee"
+      - "expense"
+      - "cost"
+    severity: high
+
+  - id: required_disclaimer_past_performance
+    name: "Disclaimer: Past performance"
+    type: required_phrase
+    phrases:
+      - "past performance"
+    severity: high
+
+  - id: min_word_count
+    name: "Minimum content length"
+    type: min_length
+    min_chars: 300
+    severity: low
