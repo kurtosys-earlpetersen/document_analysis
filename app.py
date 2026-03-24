@@ -76,6 +76,7 @@ st.markdown(f"""
 [data-testid="stSidebar"] [data-testid="stTextInput"] input {{ background: {BG} !important; color: {B6} !important; border-radius: 12px !important; border: 1px solid {G3} !important; }}
 [data-testid="stSidebar"] button {{ border-radius: 12px !important; background: {BG} !important; color: {B6} !important; font-weight: 600 !important; border: 1px solid {G3} !important; transition: all 0.15s ease; }}
 [data-testid="stSidebar"] button:hover {{ background: {B5} !important; color: {W} !important; border-color: {B5} !important; }}
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {{ height: 20px; }}
 
 /* ── Tabs: pill-style ── */
 .stTabs [data-baseweb="tab-list"] {{ gap: 0.25rem; background: {W}; border-radius: 16px; padding: 0.35rem; box-shadow: {_SH}; border: none; }}
