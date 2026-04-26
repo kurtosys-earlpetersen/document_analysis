@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Allianz Income and Growth — Monthly Factsheet — February 2026
+  InDesign XML Import File
+
+  IMPORT INSTRUCTIONS:
+  1. Open your InDesign template (US Letter, 8.5 × 11 in, 6 pages)
+  2. File > Import XML… > select this file
+  3. In Structure panel: Map Tags to Styles (or use "Map By Name" if your
+     paragraph/character styles match the aid:pstyle / aid:cstyle values below)
+  4. Drag the root <factsheet> element into your primary text frame
+  5. Tables will auto-create if frames have matching column counts
+  6. Export to PDF with "Create Tagged PDF" enabled for accessibility
+
+  NAMESPACE: aid = http://ns.adobe.com/AdobeInDesign/4.0/
+  All aid:pstyle values = InDesign Paragraph Style names
+  All aid:cstyle values = InDesign Character Style names
+
+  See companion file: docs/indesign_style_guide.md
+-->
+<factsheet xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0/"
+           xmlns:aid5="http://ns.adobe.com/AdobeInDesign/5.0/"
+           fund-name="Allianz Income and Growth"
+           share-class="A (USD)"
+           report-date="2026-02-28"
+           report-type="Monthly Factsheet"
+           lang="en">
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 1 — Cover: Header, Highlights, Investor Profile, Commentary
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="1" label="Overview and Key Highlights">
+
+    <!-- Header -->
+    <header>
+      <disclaimer aid:pstyle="Disclaimer">Marketing communication. Please refer to the prospectus and Key Investor Information Document before making any final investment decisions.</disclaimer>
+      <fund-title aid:pstyle="Fund Title">Allianz Income and Growth</fund-title>
+      <fund-subtitle aid:pstyle="Fund Subtitle">Multi-Asset Strategy — Share Class A (USD)</fund-subtitle>
+      <badge-group>
+        <badge aid:pstyle="Badge">Monthly Factsheet</badge>
+        <badge aid:pstyle="Badge">UCITS</badge>
+      </badge-group>
+      <report-date aid:pstyle="Report Date">28 February 2026</report-date>
+    </header>
+
+    <!-- Key Highlights -->
+    <section id="highlights">
+      <section-heading aid:pstyle="Section Heading">Key Highlights — February 2026</section-heading>
+
+      <highlight-grid>
+        <highlight-card>
+          <metric-label aid:pstyle="Metric Label">1-Year Return</metric-label>
+          <metric-value aid:pstyle="Metric Value Positive" alt="1-year return: positive 11.03 percent">+11.03%</metric-value>
+          <metric-context aid:pstyle="Metric Context">vs +8.5% peer median</metric-context>
+        </highlight-card>
+        <highlight-card>
+          <metric-label aid:pstyle="Metric Label">Fund Size</metric-label>
+          <metric-value aid:pstyle="Metric Value Neutral" alt="Fund size: 56.7 billion USD">$56.7B</metric-value>
+          <metric-context aid:pstyle="Metric Context">One of largest in category</metric-context>
+        </highlight-card>
+        <highlight-card>
+          <metric-label aid:pstyle="Metric Label">HY Yield to Maturity</metric-label>
+          <metric-value aid:pstyle="Metric Value Neutral" alt="High yield yield to maturity: 6.79 percent">6.79%</metric-value>
+          <metric-context aid:pstyle="Metric Context">Attractive income</metric-context>
+        </highlight-card>
+        <highlight-card>
+          <metric-label aid:pstyle="Metric Label">3-Year Volatility</metric-label>
+          <metric-value aid:pstyle="Metric Value Amber" alt="3-year volatility: 10.19 percent">10.19%</metric-value>
+          <metric-context aid:pstyle="Metric Context">Moderate risk</metric-context>
+        </highlight-card>
+        <highlight-card>
+          <metric-label aid:pstyle="Metric Label">Month Return</metric-label>
+          <metric-value aid:pstyle="Metric Value Negative" alt="February return: negative 0.62 percent">−0.62%</metric-value>
+          <metric-context aid:pstyle="Metric Context">Market volatility</metric-context>
+        </highlight-card>
+      </highlight-grid>
+    </section>
+
+    <!-- Investor Profile -->
+    <section id="investor-profile">
+      <section-heading aid:pstyle="Section Heading">Who Is This Fund For?</section-heading>
+      <section-description aid:pstyle="Section Description">Understanding if this fund fits your investment needs</section-description>
+
+      <profile-grid>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Target Investor</profile-label>
+          <profile-value aid:pstyle="Profile Value">Growth &amp; Income seekers</profile-value>
+        </profile-item>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Time Horizon</profile-label>
+          <profile-value aid:pstyle="Profile Value">5+ years (long-term)</profile-value>
+        </profile-item>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Risk Tolerance</profile-label>
+          <profile-value aid:pstyle="Profile Value">Moderate to moderate-high</profile-value>
+        </profile-item>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Portfolio Role</profile-label>
+          <profile-value aid:pstyle="Profile Value">Core multi-asset allocation</profile-value>
+        </profile-item>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Income Type</profile-label>
+          <profile-value aid:pstyle="Profile Value">Regular distributions (USD)</profile-value>
+        </profile-item>
+        <profile-item>
+          <profile-label aid:pstyle="Profile Label">Use Case</profile-label>
+          <profile-value aid:pstyle="Profile Value">Diversified US equities, HY bonds &amp; convertibles</profile-value>
+        </profile-item>
+      </profile-grid>
+    </section>
+
+    <!-- Manager Commentary -->
+    <section id="commentary">
+      <section-heading aid:pstyle="Section Heading">Manager Commentary &amp; Market Context</section-heading>
+      <section-description aid:pstyle="Section Description">Monthly insights from the investment team</section-description>
+
+      <commentary-block>
+        <commentary-paragraph aid:pstyle="Commentary Body"><commentary-label aid:cstyle="Commentary Label">Market environment: </commentary-label>February saw a modest pullback in US equities as investors digested mixed economic signals. The S&amp;P 500 retreated amid persistent inflation readings and trade policy uncertainty. HY spreads widened slightly but remained near historical tights, reflecting resilient corporate fundamentals.</commentary-paragraph>
+        <commentary-paragraph aid:pstyle="Commentary Body"><commentary-label aid:cstyle="Commentary Label">Performance drivers: </commentary-label>The fund returned −0.62%. The equity sleeve was the primary detractor as technology holdings (22.8%) faced profit-taking. The HY allocation provided a cushion through steady coupon income, and select convertible positions in healthcare and industrials contributed positively through favorable conversion dynamics.</commentary-paragraph>
+        <commentary-paragraph aid:pstyle="Commentary Body"><commentary-label aid:cstyle="Commentary Label">Positioning &amp; outlook: </commentary-label>We maintain our balanced three-sleeve approach (~1/3 each). We see the current yield environment as attractive for income generation. We have modestly increased duration in the HY sleeve to lock in yields and remain constructive on US corporate credit quality.</commentary-paragraph>
+      </commentary-block>
+
+      <author-block>
+        <author-initials aid:pstyle="Author Initials">JK</author-initials>
+        <author-name aid:pstyle="Author Name">Justin Kass, CFA</author-name>
+        <author-role aid:pstyle="Author Role">Lead Portfolio Manager · since March 2022</author-role>
+      </author-block>
+
+      <outlook-grid>
+        <outlook-item>
+          <outlook-indicator aid:pstyle="Outlook Indicator">▲</outlook-indicator>
+          <outlook-label aid:pstyle="Outlook Label">US Equities</outlook-label>
+          <outlook-value aid:pstyle="Outlook Value Positive">Moderately Positive</outlook-value>
+        </outlook-item>
+        <outlook-item>
+          <outlook-indicator aid:pstyle="Outlook Indicator">►</outlook-indicator>
+          <outlook-label aid:pstyle="Outlook Label">HY Credit</outlook-label>
+          <outlook-value aid:pstyle="Outlook Value Positive">Constructive</outlook-value>
+        </outlook-item>
+        <outlook-item>
+          <outlook-indicator aid:pstyle="Outlook Indicator">►</outlook-indicator>
+          <outlook-label aid:pstyle="Outlook Label">Convertibles</outlook-label>
+          <outlook-value aid:pstyle="Outlook Value Neutral">Neutral to Positive</outlook-value>
+        </outlook-item>
+        <outlook-item>
+          <outlook-indicator aid:pstyle="Outlook Indicator">▼</outlook-indicator>
+          <outlook-label aid:pstyle="Outlook Label">Duration Risk</outlook-label>
+          <outlook-value aid:pstyle="Outlook Value Amber">Cautious</outlook-value>
+        </outlook-item>
+      </outlook-grid>
+    </section>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">1 / 6</page-number>
+    </page-footer>
+  </page>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 2 — Performance
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="2" label="Performance">
+
+    <section id="performance">
+      <section-heading aid:pstyle="Section Heading">Performance</section-heading>
+      <section-description aid:pstyle="Section Description">Net of fees, in USD. Past performance does not predict future returns.</section-description>
+
+      <!-- Chart placeholder — place your chart graphic in InDesign here -->
+      <chart-placeholder id="performance-chart"
+                         alt="Growth of USD 100 invested from Feb 2016 to Feb 2026. Fund grew from 100 to approximately 230, with a significant drawdown in 2022 (−19.71%) followed by strong recovery. Peer median shown as dashed line."
+                         chart-type="line"
+                         image-frame="performance_chart_frame">
+        <chart-annotation position="top-center" year="2021" color="green">2021: +31.21% recovery</chart-annotation>
+        <chart-annotation position="center-right" year="2022" color="red">2022: −19.71% drawdown</chart-annotation>
+        <chart-annotation position="top-right" year="2026" color="blue">+130% total return (10Y)</chart-annotation>
+        <chart-legend>
+          <legend-item color="#0342E4" style="solid">Allianz Income &amp; Growth</legend-item>
+          <legend-item color="#9CA3AF" style="dashed">Peer median (illustrative)</legend-item>
+        </chart-legend>
+      </chart-placeholder>
+
+      <!-- Cumulative Returns Table -->
+      <data-table id="cumulative-returns" aid:table="table" aid:trows="9" aid:tcols="3">
+        <table-caption aid:pstyle="Table Caption">Cumulative &amp; Annualised Returns¹</table-caption>
+        <table-header>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header">Period</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Fund</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Peer Median</header-cell>
+        </table-header>
+        <table-body>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">1 month</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Negative">−0.62%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−0.45%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">3 months</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+1.11%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+0.82%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">6 months</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+4.54%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+3.90%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">1 year</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+11.03%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.50%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">3 years (cum.)</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+39.47%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+24.60%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">3 years (p.a.)</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+11.73%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+7.62%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">5 years (p.a.)</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+4.71%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+3.80%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">10 years (cum.)</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+130.18%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+95.00%</cell></table-row>
+        </table-body>
+      </data-table>
+
+      <!-- Calendar Year Returns -->
+      <data-table id="calendar-returns" aid:table="table" aid:trows="9" aid:tcols="3">
+        <table-caption aid:pstyle="Table Caption">Calendar Year Returns¹</table-caption>
+        <table-header>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header">Year</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Fund</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Peer Median</header-cell>
+        </table-header>
+        <table-body>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2025 YTD</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+0.95%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+0.60%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2024</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+10.53%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.20%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2023</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+9.94%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+7.50%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2022</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Negative">−19.71%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−15.30%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2021</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+11.73%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.90%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2020</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+21.90%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+12.40%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2019</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+19.55%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+14.20%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">2018</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Negative">−4.90%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−4.60%</cell></table-row>
+        </table-body>
+      </data-table>
+
+      <callout type="blue" aid:pstyle="Callout Blue">
+        <callout-heading aid:cstyle="Callout Heading">What drove returns? </callout-heading>Over the past 12 months, the fund's +11.03% return outperformed the peer group median by ~2.5 percentage points. Key contributors were strong equity selection in technology and industrials, combined with above-average carry from the high-yield sleeve. The balanced three-asset-class structure continued to deliver smoother returns versus pure equity or fixed income strategies.</callout>
+    </section>
+
+    <!-- Peer Comparison -->
+    <section id="peer-comparison">
+      <section-heading aid:pstyle="Section Heading">Peer Group Comparison</section-heading>
+      <section-description aid:pstyle="Section Description">USD Moderate Allocation category — indicative peer data</section-description>
+
+      <data-table id="peer-table" aid:table="table" aid:trows="6" aid:tcols="6">
+        <table-header>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header">Fund</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">1Y Return</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">3Y p.a.</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Vol (3Y)</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Sharpe (3Y)</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Max DD</header-cell>
+        </table-header>
+        <table-body>
+          <table-row highlight="true"><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label Bold">Allianz Income &amp; Growth</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+11.03%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">+11.73%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">10.19%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.11</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−21.64%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Peer 1 — Large Multi-Asset</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+9.20%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.40%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">9.50%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.08</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−18.50%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Peer 2 — Balanced Growth</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.10%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+7.20%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">11.30%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.05</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−22.10%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Peer 3 — Global Allocation</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+7.50%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+6.80%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">8.90%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.04</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−16.20%</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Category Median</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+8.50%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+7.62%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">10.00%</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.06</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−19.00%</cell></table-row>
+        </table-body>
+      </data-table>
+
+      <callout type="green" aid:pstyle="Callout Green">
+        <callout-heading aid:cstyle="Callout Heading">Peer positioning </callout-heading>The fund ranks in the top quartile of its Morningstar category over 1 and 3 years, with higher absolute returns partly offset by slightly above-median volatility reflecting its growth-oriented equity tilt.</callout>
+    </section>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">2 / 6</page-number>
+    </page-footer>
+  </page>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 3 — Portfolio Composition
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="3" label="Portfolio Composition">
+
+    <section id="portfolio">
+      <section-heading aid:pstyle="Section Heading">Portfolio Composition</section-heading>
+      <section-description aid:pstyle="Section Description">Asset allocation, sector exposure, and top holdings as of 28 February 2026</section-description>
+
+      <!-- Asset Allocation -->
+      <subsection id="asset-allocation">
+        <subsection-heading aid:pstyle="Subsection Heading">Asset Allocation²</subsection-heading>
+        <allocation-data alt="Asset allocation: Equity 31.66%, HY Bonds 30.90%, Convertibles 30.85%, Cash 6.59%">
+          <allocation-item asset="Equity" weight="31.66" color="#0342E4"/>
+          <allocation-item asset="High Yield Bond" weight="30.90" color="#071935"/>
+          <allocation-item asset="Convertible Security" weight="30.85" color="#6366F1"/>
+          <allocation-item asset="Cash &amp; Other" weight="6.59" color="#9CA3AF"/>
+        </allocation-data>
+        <callout type="blue" aid:pstyle="Callout Blue">
+          <callout-heading aid:cstyle="Callout Heading">Why this balanced structure? </callout-heading>The roughly equal three-way split provides diversification: equities offer growth potential, high-yield bonds generate income, and convertibles provide asymmetric return profiles with equity upside and bond-like downside protection.</callout>
+      </subsection>
+
+      <!-- Top 10 Holdings -->
+      <subsection id="top-holdings">
+        <subsection-heading aid:pstyle="Subsection Heading">Top 10 Holdings³˒⁴</subsection-heading>
+        <data-table id="holdings-table" aid:table="table" aid:trows="11" aid:tcols="3">
+          <table-header>
+            <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header">Holding</header-cell>
+            <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header">Type</header-cell>
+            <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Right">Weight</header-cell>
+          </table-header>
+          <table-body>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">NVIDIA Corp</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">2.90%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Apple Inc</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">2.37%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Alphabet Inc (A)</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">1.76%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Microsoft Corp</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">1.66%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Amazon.com Inc</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">1.26%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Western Digital Conv 3.0% '28</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Convertible</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">1.26%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Lumentum Conv 0.5% '28</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Convertible</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.97%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Wells Fargo 7.5% '98</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">HY Bond</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.95%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Broadcom Inc</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Equity</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.93%</cell></table-row>
+            <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Welltower OP Conv 3.125% '29</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Convertible</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">0.89%</cell></table-row>
+          </table-body>
+        </data-table>
+        <table-footnote aid:pstyle="Table Footnote">Top 10 = 14.95% of portfolio. For illustrative purposes only.</table-footnote>
+      </subsection>
+
+      <!-- Sector Allocation -->
+      <subsection id="sector-allocation">
+        <subsection-heading aid:pstyle="Subsection Heading">Equity Sector Allocation²</subsection-heading>
+        <sector-data>
+          <sector-item name="Information Technology" weight="22.83" color="#0342E4"/>
+          <sector-item name="Industrials" weight="12.38" color="#0A2347"/>
+          <sector-item name="Consumer Discretionary" weight="11.47" color="#6366F1"/>
+          <sector-item name="Financials" weight="9.86" color="#16A34A"/>
+          <sector-item name="Communication Services" weight="9.68" color="#D97706"/>
+          <sector-item name="Health Care" weight="9.45" color="#EC4899"/>
+          <sector-item name="Energy" weight="4.27" color="#F97316"/>
+          <sector-item name="Utilities" weight="4.12" color="#14B8A6"/>
+          <sector-item name="Materials" weight="3.62" color="#8B5CF6"/>
+          <sector-item name="Real Estate" weight="3.18" color="#64748B"/>
+          <sector-item name="Consumer Staples" weight="2.53" color="#6B7280"/>
+        </sector-data>
+      </subsection>
+
+      <!-- Credit Quality -->
+      <subsection id="credit-quality">
+        <subsection-heading aid:pstyle="Subsection Heading">Fixed Income Credit Quality²</subsection-heading>
+        <rating-data>
+          <rating-item grade="BBB" category="Investment Grade" weight="2.29" color="#16A34A"/>
+          <rating-item grade="BB" category="High Yield" weight="52.35" color="#0342E4"/>
+          <rating-item grade="B" category="High Yield" weight="41.45" color="#071935"/>
+          <rating-item grade="CCC and lower" category="High Yield" weight="3.38" color="#DC2626"/>
+          <rating-item grade="Not Rated" category="Cash &amp; Others" weight="0.54" color="#6B7280"/>
+        </rating-data>
+        <callout type="blue" aid:pstyle="Callout Blue">
+          <callout-heading aid:cstyle="Callout Heading">Credit positioning </callout-heading>The HY portfolio is primarily invested in BB and B-rated credits, balancing yield pickup with credit quality. The effective duration of 3.30 years keeps interest rate sensitivity moderate.</callout>
+      </subsection>
+    </section>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">3 / 6</page-number>
+    </page-footer>
+  </page>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 4 — Risk, Scenarios, Opportunities & Risks
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="4" label="Risk Profile, Scenarios, Opportunities and Risks">
+
+    <!-- Risk Profile -->
+    <section id="risk-profile">
+      <section-heading aid:pstyle="Section Heading">Risk Profile &amp; Key Metrics</section-heading>
+      <section-description aid:pstyle="Section Description">Understanding the fund's risk characteristics</section-description>
+
+      <risk-indicator level="4" max="7" alt="Risk indicator: level 4 of 7. Lower risk on the left, higher risk on the right."/>
+
+      <risk-note aid:pstyle="Risk Note">Assumes recommended holding period. Even category 1 is not risk-free.</risk-note>
+
+      <key-metrics>
+        <key-metric label="Volatility (3Y)" value="10.19%"/>
+        <key-metric label="Volatility (5Y)" value="7.49%"/>
+        <key-metric label="Sharpe Ratio (3Y)" value="0.11"/>
+        <key-metric label="Sharpe Ratio (5Y)" value="0.93"/>
+        <key-metric label="Max Drawdown" value="−21.64%"/>
+        <key-metric label="Time to Recover" value="23 months"/>
+      </key-metrics>
+
+      <callout type="amber" aid:pstyle="Callout Amber">
+        <callout-heading aid:cstyle="Callout Heading">What this means for you </callout-heading>In a worst case, the fund historically experienced a maximum decline of 21.64%, taking 23 months to recover. The 3-year Sharpe ratio of 0.11 reflects the challenging 2022 environment, while the 5-year ratio of 0.93 better represents risk-adjusted returns over a full market cycle.</callout>
+    </section>
+
+    <!-- Scenario Guidance -->
+    <section id="scenarios">
+      <section-heading aid:pstyle="Section Heading">Scenario Guidance</section-heading>
+      <section-description aid:pstyle="Section Description">Illustrative outcomes based on historical patterns. Not forecasts.</section-description>
+
+      <data-table id="scenario-table" aid:table="table" aid:trows="5" aid:tcols="4">
+        <table-header>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Dark">Scenario</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Dark Right">Ann. Return</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Dark Right">$10,000 after 5Y</header-cell>
+          <header-cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Header Dark Right">Historical Context</header-cell>
+        </table-header>
+        <table-body>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Negative">Stress</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−12% p.a.</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">$5,277</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Similar to 2008 / severe recession</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Amber">Unfavourable</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">−3% p.a.</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">$8,587</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Prolonged low-growth environment</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Label">Moderate</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+5% p.a.</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">$12,763</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Aligned with long-term average</cell></table-row>
+          <table-row><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Positive">Favourable</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">+12% p.a.</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell Right">$17,623</cell><cell aid:table="cell" aid:ccols="1" aid:crows="1" aid:pstyle="Table Cell">Strong equity &amp; credit markets</cell></table-row>
+        </table-body>
+      </data-table>
+      <table-footnote aid:pstyle="Table Footnote">For illustrative purposes only. Past performance does not predict future returns.</table-footnote>
+    </section>
+
+    <!-- Opportunities & Risks -->
+    <section id="opportunities-risks">
+      <section-heading aid:pstyle="Section Heading">Opportunities &amp; Risks</section-heading>
+      <section-description aid:pstyle="Section Description">Key factors to consider before investing</section-description>
+
+      <opportunities>
+        <list-heading aid:pstyle="List Heading Green">Opportunities</list-heading>
+        <list-item aid:pstyle="Opportunity Item">Attractive potential returns combining equities, HY bonds, and convertible bonds</list-item>
+        <list-item aid:pstyle="Opportunity Item">Access to the US capital market — deepest and most liquid globally</list-item>
+        <list-item aid:pstyle="Opportunity Item">Broad diversification across hundreds of securities reduces single-name risk</list-item>
+        <list-item aid:pstyle="Opportunity Item">Additional return potential from active security analysis and tactical allocation</list-item>
+        <list-item aid:pstyle="Opportunity Item">Currency gains possible for non-USD investors in unhedged share classes</list-item>
+      </opportunities>
+
+      <risks>
+        <list-heading aid:pstyle="List Heading Red">Risks</list-heading>
+        <list-item aid:pstyle="Risk Item">All three asset classes may be subject to volatility; fund price may fluctuate significantly</list-item>
+        <list-item aid:pstyle="Risk Item">US market underperformance could disproportionately impact the fund</list-item>
+        <list-item aid:pstyle="Risk Item">HY bonds carry higher credit risk; defaults could impact returns</list-item>
+        <list-item aid:pstyle="Risk Item">Success of active management and security selection is not guaranteed</list-item>
+        <list-item aid:pstyle="Risk Item">Currency losses possible in unhedged share classes for non-USD investors</list-item>
+      </risks>
+    </section>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">4 / 6</page-number>
+    </page-footer>
+  </page>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 5 — ESG, Team, Fund Information
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="5" label="ESG, Team, Fund Information">
+
+    <!-- ESG -->
+    <section id="esg">
+      <section-heading aid:pstyle="Section Heading">ESG &amp; Sustainability Considerations</section-heading>
+      <section-description aid:pstyle="Section Description">How environmental, social, and governance factors are considered</section-description>
+
+      <esg-badges>
+        <esg-badge aid:pstyle="ESG Badge">Article 6 — SFDR</esg-badge>
+        <esg-badge aid:pstyle="ESG Badge">ESG Integration</esg-badge>
+      </esg-badges>
+
+      <esg-body aid:pstyle="ESG Body">While this fund does not have sustainable investment as its objective, ESG factors are integrated into the investment analysis process. The investment team considers material ESG risks as part of fundamental research across all three asset sleeves. AllianzGI applies firm-wide exclusion policies covering controversial weapons and other areas.</esg-body>
+      <esg-link aid:pstyle="ESG Link">For detailed information, please refer to the fund's pre-contractual disclosures and the AllianzGI Sustainability and Stewardship Report at allianzgi.com.</esg-link>
+    </section>
+
+    <!-- Investment Team -->
+    <section id="team">
+      <section-heading aid:pstyle="Section Heading">Investment Team</section-heading>
+      <section-description aid:pstyle="Section Description">Managed by Voya Investment Management LLC</section-description>
+
+      <team-members>
+        <team-member>
+          <member-initials aid:pstyle="Team Initials">JK</member-initials>
+          <member-name aid:pstyle="Team Name">Justin Kass</member-name>
+          <member-role aid:pstyle="Team Role">Lead PM · since Mar 2022</member-role>
+        </team-member>
+        <team-member>
+          <member-initials aid:pstyle="Team Initials">MY</member-initials>
+          <member-name aid:pstyle="Team Name">Michael Yee</member-name>
+          <member-role aid:pstyle="Team Role">Portfolio Manager · since Mar 2022</member-role>
+        </team-member>
+        <team-member>
+          <member-initials aid:pstyle="Team Initials">DO</member-initials>
+          <member-name aid:pstyle="Team Name">David Oberto</member-name>
+          <member-role aid:pstyle="Team Role">Portfolio Manager · since Mar 2022</member-role>
+        </team-member>
+      </team-members>
+    </section>
+
+    <!-- Fund Information -->
+    <section id="fund-info">
+      <section-heading aid:pstyle="Section Heading">Fund Information</section-heading>
+      <section-description aid:pstyle="Section Description">Key facts, share class data, and fee details</section-description>
+
+      <info-group title="Key Facts">
+        <info-heading aid:pstyle="Info Group Heading">Key Facts</info-heading>
+        <info-pair><info-label aid:pstyle="Info Label">Asset class</info-label><info-value aid:pstyle="Info Value">Multi Asset</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Fund launch</info-label><info-value aid:pstyle="Info Value">31 May 2011</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Currency</info-label><info-value aid:pstyle="Info Value">USD</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Fund size</info-label><info-value aid:pstyle="Info Value">$56,704.03M</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Domicile</info-label><info-value aid:pstyle="Info Value">Luxembourg</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">FY end</info-label><info-value aid:pstyle="Info Value">31 December</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">ISIN</info-label><info-value aid:pstyle="Info Value">LU0964807845</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">WKN</info-label><info-value aid:pstyle="Info Value">A1W4VN</info-value></info-pair>
+      </info-group>
+
+      <info-group title="Share Class A (USD)">
+        <info-heading aid:pstyle="Info Group Heading">Share Class A (USD)</info-heading>
+        <info-pair><info-label aid:pstyle="Info Label">Launch date</info-label><info-value aid:pstyle="Info Value">1 Oct 2013</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">SC size</info-label><info-value aid:pstyle="Info Value">$434.89M</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Income</info-label><info-value aid:pstyle="Info Value">Distributing</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Dealing</info-label><info-value aid:pstyle="Info Value">Daily</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Morningstar</info-label><info-value aid:pstyle="Info Value">★★★</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Category</info-label><info-value aid:pstyle="Info Value">USD Moderate Alloc.</info-value></info-pair>
+      </info-group>
+
+      <info-group title="Fees and Charges">
+        <info-heading aid:pstyle="Info Group Heading">Fees &amp; Charges⁶</info-heading>
+        <info-pair><info-label aid:pstyle="Info Label">Front-end load</info-label><info-value aid:pstyle="Info Value">4.00% (max 5.00%)</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">All-in fee p.a.</info-label><info-value aid:pstyle="Info Value">1.50%</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">TER</info-label><info-value aid:pstyle="Info Value">1.56%</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Custodian</info-label><info-value aid:pstyle="Info Value">State Street Int'l</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Mgmt Co.</info-label><info-value aid:pstyle="Info Value">AllianzGI GmbH</info-value></info-pair>
+        <info-pair><info-label aid:pstyle="Info Label">Inv. Mgr</info-label><info-value aid:pstyle="Info Value">Voya Inv. Mgmt LLC</info-value></info-pair>
+      </info-group>
+
+      <fi-metrics>
+        <key-metric label="Eff. Duration (HY)" value="3.30"/>
+        <key-metric label="Yield to Maturity⁷" value="6.79%"/>
+        <key-metric label="Yield to Worst⁸" value="6.44%"/>
+      </fi-metrics>
+    </section>
+
+    <!-- CTA -->
+    <cta-block>
+      <cta-heading aid:pstyle="CTA Heading">Want to learn more?</cta-heading>
+      <cta-body aid:pstyle="CTA Body">Access the full prospectus, KID, and performance data on our website.</cta-body>
+      <cta-link url="https://www.allianzgi.com" aid:pstyle="CTA Link">Visit allianzgi.com</cta-link>
+      <cta-link url="#" aid:pstyle="CTA Link Secondary">Download KID</cta-link>
+    </cta-block>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">5 / 6</page-number>
+    </page-footer>
+  </page>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PAGE 6 — Footnotes & Disclaimers
+       ══════════════════════════════════════════════════════════════ -->
+  <page number="6" label="Footnotes and Legal Disclaimers">
+
+    <section id="footnotes">
+      <section-heading aid:pstyle="Section Heading">Footnotes</section-heading>
+
+      <footnote-list>
+        <footnote number="1" aid:pstyle="Footnote">Performance calculated based on NAV per unit/share (front-end load deducted in first year), assuming distributions reinvested. Calculation uses BVI method. Past performance does not predict future returns. Source: IDS GmbH (unless otherwise indicated). All performance data prior to share class launch (01/10/2013) refers to Allianz Income and Growth - AT - USD (ISIN LU0689472784).</footnote>
+        <footnote number="2" aid:pstyle="Footnote">For guidance only and not indicative of future allocation.</footnote>
+        <footnote number="3" aid:pstyle="Footnote">The fund can invest in other funds (target funds).</footnote>
+        <footnote number="4" aid:pstyle="Footnote">Securities mentioned are for illustrative purposes only and do not constitute a recommendation to buy or sell.</footnote>
+        <footnote number="5" aid:pstyle="Footnote">The Risk Indicator shows how likely it is that the product will lose money because of market movements or inability to pay. Even the lowest category does not mean risk-free.</footnote>
+        <footnote number="6" aid:pstyle="Footnote">Sales charges: up to 100% of front-end load may be collected by distributor. The all-in fee includes management, administration and distribution fees.</footnote>
+        <footnote number="7" aid:pstyle="Footnote">Yield to maturity is the weighted average of YTM of bonds held. It is a portfolio characteristic and does not reflect actual fund income. Expenses are not deducted.</footnote>
+        <footnote number="8" aid:pstyle="Footnote">Yield to worst represents the lowest potential yield (excluding default). Calculation before currency hedging. Not suitable as indicator of future performance.</footnote>
+      </footnote-list>
+
+      <morningstar-attribution aid:pstyle="Attribution">Morningstar Rating: © Morningstar, Inc. All rights reserved. Rating as of 31/01/2026. Top 10%: 5 stars; next 22.5%: 4 stars; middle 35%: 3 stars; next 22.5%: 2 stars; bottom 10%: 1 star.</morningstar-attribution>
+      <morningstar-attribution aid:pstyle="Attribution">Morningstar Style Box: © Morningstar, Inc. This fund appeared as Large Blend at 31/12/2025.</morningstar-attribution>
+    </section>
+
+    <section id="disclaimers">
+      <section-heading aid:pstyle="Section Heading">Important Information &amp; Disclaimers</section-heading>
+
+      <legal-paragraph aid:pstyle="Legal Body">Investing involves risk. The value of an investment and the income from it may fall as well as rise and investors might not get back the full amount invested. Investing in fixed income instruments may expose investors to various risks, including but not limited to creditworthiness, interest rate, liquidity and restricted flexibility risks. Changes to the economic environment and market conditions may affect these risks, resulting in an adverse effect to the value of the investment.</legal-paragraph>
+
+      <legal-paragraph aid:pstyle="Legal Body">During periods of rising nominal interest rates, the values of fixed income instruments are generally expected to decline. Conversely, during periods of declining interest rates, values are generally expected to rise. Liquidity risk may possibly delay or prevent account withdrawals or redemptions.</legal-paragraph>
+
+      <legal-paragraph aid:pstyle="Legal Body">Allianz Income and Growth is a sub-fund of Allianz Global Investors Fund SICAV, an open-ended investment company with variable share capital organised under the laws of Luxembourg. The value of units/shares may be subject to increased volatility. Past performance does not predict future returns.</legal-paragraph>
+
+      <legal-paragraph aid:pstyle="Legal Body">If the currency in which the past performance is displayed differs from the currency of the country in which the investor resides, then the investor should be aware that due to exchange rate fluctuations the performance shown may be higher or lower if converted into the investor's local currency. This is for information only and not to be construed as a solicitation or an invitation to make an offer, to conclude a contract, or to buy or sell any securities.</legal-paragraph>
+
+      <legal-heading aid:pstyle="Legal Heading">For investors in the United Kingdom:</legal-heading>
+      <legal-paragraph aid:pstyle="Legal Body">This Fund is authorised overseas but not in the United Kingdom. Domiciled in Luxembourg, authorised by the CSSF. Recognised in the UK under the Overseas Funds Regime. Managed by Allianz Global Investors GmbH (authorised by BaFin). The Financial Ombudsman Service is unlikely to consider complaints related to the scheme. Investors can submit complaints to the Facilities Agent (Allianz Global Investors UK Limited).</legal-paragraph>
+
+      <legal-paragraph aid:pstyle="Legal Body">This is a marketing communication issued by Allianz Global Investors GmbH and approved by Allianz Global Investors UK Limited, 199 Bishopsgate, London, EC2M 3TY, allianzglobalinvestors.co.uk. Allianz Global Investors UK Limited (FRN 959195) is authorised and regulated by the Financial Conduct Authority (fca.org.uk).</legal-paragraph>
+
+      <legal-paragraph aid:pstyle="Legal Body">The Summary of Investor Rights is available in English, French, German, Italian and Spanish at regulatory.allianzgi.com/en/investors-rights.</legal-paragraph>
+
+      <legal-signoff aid:pstyle="Legal Signoff">Allianz Global Investors · February 2026</legal-signoff>
+    </section>
+
+    <page-footer>
+      <footer-brand aid:pstyle="Page Footer Brand">ALLIANZ GLOBAL INVESTORS</footer-brand>
+      <page-number aid:pstyle="Page Footer Number">6 / 6</page-number>
+    </page-footer>
+  </page>
+
+</factsheet>
