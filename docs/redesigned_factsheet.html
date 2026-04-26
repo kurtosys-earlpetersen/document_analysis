@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Allianz Income and Growth Fund Monthly Factsheet - February 2026. A multi-asset fund investing in US equities, high-yield bonds and convertible bonds.">
+  <title>Allianz Income and Growth — Monthly Factsheet — February 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ================================================================
+       DESIGN TOKENS
+       ================================================================ */
+    :root {
+      --page-w: 8.5in;
+      --page-h: 11in;
+      --margin-x: 0.6in;
+      --margin-top: 0.5in;
+      --margin-bottom: 0.55in;
+      --content-w: calc(var(--page-w) - 2 * var(--margin-x));
+
+      --navy-900: #071935;
+      --navy-800: #0a2347;
+      --navy-700: #0e305e;
+      --blue-600: #0342e4;
+      --blue-500: #1a6dff;
+      --blue-100: #e8eefb;
+      --blue-50:  #f0f4fd;
+      --slate-600: #3a4051;
+      --slate-500: #4a5267;
+      --slate-400: #6b7280;
+      --slate-300: #9ca3af;
+      --gray-200:  #e5e7eb;
+      --gray-100:  #f3f4f6;
+      --gray-50:   #f9fafb;
+      --white:     #ffffff;
+      --green-700: #15803d;
+      --green-600: #16a34a;
+      --green-100: #dcfce7;
+      --green-50:  #f0fdf4;
+      --red-700:   #b91c1c;
+      --red-600:   #dc2626;
+      --red-100:   #fee2e2;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50:  #fffbeb;
+
+      --ff: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --sh-sm: 0 1px 2px rgba(0,0,0,0.04);
+      --sh-md: 0 2px 6px rgba(0,0,0,0.06);
+      --r-sm: 6px;
+      --r-md: 8px;
+      --r-lg: 10px;
+    }
+
+    /* ================================================================
+       RESET & BASE
+       ================================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      font-size: 9.5pt;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      font-family: var(--ff);
+      color: var(--slate-600);
+      background: #d0d3d8;
+      line-height: 1.45;
+    }
+
+    .skip-link {
+      position: absolute; top: -100px; left: 0;
+      background: var(--blue-600); color: var(--white);
+      padding: 0.5rem 1rem; z-index: 1000; font-weight: 600;
+      text-decoration: none; border-radius: 0 0 var(--r-sm) 0;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ================================================================
+       PAGE SYSTEM — US Letter (8.5 × 11 in)
+       ================================================================ */
+    .page {
+      width: var(--page-w);
+      min-height: var(--page-h);
+      background: var(--white);
+      margin: 20px auto;
+      padding: var(--margin-top) var(--margin-x) var(--margin-bottom);
+      position: relative;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 0.25in;
+      right: var(--margin-x);
+      font-size: 7pt;
+      color: var(--slate-400);
+      font-weight: 500;
+    }
+
+    .page-footer-brand {
+      position: absolute;
+      bottom: 0.25in;
+      left: var(--margin-x);
+      font-size: 6.5pt;
+      color: var(--slate-300);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .page-footer-line {
+      position: absolute;
+      bottom: 0.45in;
+      left: var(--margin-x);
+      right: var(--margin-x);
+      height: 1px;
+      background: var(--gray-200);
+    }
+
+    @media print {
+      body { background: white; }
+      .page {
+        margin: 0; box-shadow: none;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page:last-child { page-break-after: auto; }
+    }
+
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    /* ================================================================
+       PAGE 1: HEADER BLOCK
+       ================================================================ */
+    .p1-header {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+      color: var(--white);
+      margin: calc(-1 * var(--margin-top)) calc(-1 * var(--margin-x)) 0;
+      padding: 0.45in var(--margin-x) 0.35in;
+    }
+    .p1-header-inner {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 1rem;
+    }
+    .p1-brand { display: flex; align-items: center; gap: 0.6rem; }
+    .p1-logo {
+      width: 36px; height: 36px;
+      background: var(--white); border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .p1-title { font-size: 16pt; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
+    .p1-subtitle { font-size: 8pt; color: rgba(255,255,255,0.65); margin-top: 2px; }
+    .p1-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .p1-badge {
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+      padding: 3px 10px; border-radius: 100px; font-size: 7pt; font-weight: 600; white-space: nowrap;
+    }
+    .p1-date { font-size: 8pt; font-weight: 600; opacity: 0.8; }
+    .p1-disclaimer {
+      background: var(--amber-50); border: 1px solid var(--amber-100);
+      border-radius: var(--r-sm); padding: 5px 10px;
+      font-size: 6.5pt; color: var(--amber-600); text-align: center;
+      margin: 12px calc(-1 * var(--margin-x)); margin-left: 0; margin-right: 0;
+      margin-top: 10px;
+    }
+
+    /* ================================================================
+       SECTION PATTERN
+       ================================================================ */
+    .sec-header {
+      display: flex; align-items: center; gap: 0.4rem;
+      margin-bottom: 8px; padding-bottom: 5px;
+      border-bottom: 1.5px solid var(--gray-200);
+    }
+    .sec-icon {
+      width: 22px; height: 22px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10pt; flex-shrink: 0;
+    }
+    .sec-title { font-size: 10pt; font-weight: 700; color: var(--navy-900); }
+    .sec-desc { font-size: 7pt; color: var(--slate-400); }
+
+    .card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); padding: 10px; box-shadow: var(--sh-sm);
+    }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+    /* ================================================================
+       KEY HIGHLIGHTS
+       ================================================================ */
+    .highlights {
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); padding: 10px 12px; margin-top: 12px;
+    }
+    .hl-header { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 8px; }
+    .hl-title { font-size: 9.5pt; font-weight: 700; color: var(--navy-900); }
+    .hl-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .hl-card {
+      background: var(--white); border-radius: var(--r-sm); padding: 8px 6px;
+      text-align: center; border: 1px solid var(--gray-200);
+    }
+    .hl-label {
+      font-size: 5.5pt; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--slate-400); margin-bottom: 2px;
+    }
+    .hl-value { font-size: 14pt; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+    .hl-ctx { font-size: 6pt; color: var(--slate-400); margin-top: 2px; }
+    .v-pos { color: var(--green-600); }
+    .v-neg { color: var(--red-600); }
+    .v-neut { color: var(--navy-900); }
+    .v-amb { color: var(--amber-600); }
+
+    /* ================================================================
+       INVESTOR PROFILE
+       ================================================================ */
+    .inv-profile {
+      background: var(--blue-50); border: 1px solid var(--blue-100);
+      border-radius: var(--r-md); padding: 10px 12px; margin-top: 10px;
+    }
+    .prof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 6px; }
+    .prof-item { display: flex; flex-direction: column; gap: 1px; }
+    .prof-lbl { font-size: 5.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue-600); }
+    .prof-val { font-size: 8pt; font-weight: 600; color: var(--navy-900); }
+
+    /* ================================================================
+       COMMENTARY
+       ================================================================ */
+    .commentary {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); padding: 12px; box-shadow: var(--sh-sm);
+    }
+    .commentary p {
+      margin-bottom: 7px; font-size: 8pt; line-height: 1.55; color: var(--slate-600);
+    }
+    .commentary p:last-of-type { margin-bottom: 0; }
+    .cm-author {
+      display: flex; align-items: center; gap: 0.4rem;
+      margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--gray-200);
+    }
+    .cm-avatar {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--navy-900); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6pt; font-weight: 700;
+    }
+    .cm-name { font-size: 7pt; font-weight: 600; color: var(--navy-900); }
+    .cm-role { font-size: 6pt; color: var(--slate-400); }
+
+    .outlook-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+    .outlook-item {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-sm); padding: 6px; text-align: center;
+    }
+    .outlook-ind { font-size: 10pt; line-height: 1; }
+    .outlook-lbl { font-size: 5.5pt; font-weight: 600; color: var(--slate-400); text-transform: uppercase; letter-spacing: 0.04em; }
+    .outlook-val { font-size: 7pt; font-weight: 700; color: var(--navy-900); margin-top: 1px; }
+
+    /* ================================================================
+       PERFORMANCE TABLES
+       ================================================================ */
+    .ptable {
+      width: 100%; border-collapse: separate; border-spacing: 0; font-size: 7.5pt;
+    }
+    .ptable caption {
+      text-align: left; font-weight: 700; font-size: 8pt;
+      color: var(--navy-900); padding-bottom: 5px;
+    }
+    .ptable thead th {
+      background: var(--gray-50); padding: 4px 6px; text-align: right;
+      font-weight: 600; color: var(--slate-500); font-size: 6pt;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      border-bottom: 1.5px solid var(--gray-200);
+    }
+    .ptable thead th:first-child { text-align: left; border-radius: var(--r-sm) 0 0 0; }
+    .ptable thead th:last-child { border-radius: 0 var(--r-sm) 0 0; }
+    .ptable tbody td {
+      padding: 3.5px 6px; text-align: right;
+      border-bottom: 0.5px solid var(--gray-100);
+    }
+    .ptable tbody td:first-child { text-align: left; font-weight: 600; color: var(--navy-900); }
+    .p-pos { color: var(--green-600); font-weight: 600; }
+    .p-neg { color: var(--red-600); font-weight: 600; }
+
+    /* ================================================================
+       CHART
+       ================================================================ */
+    .chart-box {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); padding: 10px; box-shadow: var(--sh-sm);
+    }
+    .chart-area {
+      width: 100%; height: 160px;
+      background: linear-gradient(180deg, var(--blue-50) 0%, var(--white) 100%);
+      border-radius: var(--r-sm); position: relative; overflow: hidden;
+    }
+    .chart-area svg { width: 100%; height: 100%; }
+    .ch-ann {
+      position: absolute; background: var(--white);
+      border: 1px solid var(--gray-200); border-radius: 4px;
+      padding: 2px 5px; font-size: 6pt; font-weight: 600;
+      box-shadow: var(--sh-sm); white-space: nowrap;
+    }
+    .ch-legend { display: flex; gap: 1rem; margin-top: 6px; font-size: 6.5pt; }
+    .ch-leg-item { display: flex; align-items: center; gap: 3px; }
+    .ch-dot { width: 8px; height: 2px; border-radius: 1px; }
+
+    /* ================================================================
+       CALLOUT
+       ================================================================ */
+    .callout {
+      border-radius: var(--r-sm); padding: 7px 10px;
+      margin-top: 8px; font-size: 7.5pt; line-height: 1.5;
+    }
+    .callout strong { display: block; font-size: 7pt; font-weight: 700; margin-bottom: 1px; }
+    .co-blue { background: var(--blue-50); border-left: 3px solid var(--blue-600); color: var(--navy-900); }
+    .co-green { background: var(--green-50); border-left: 3px solid var(--green-600); color: var(--green-700); }
+    .co-amber { background: var(--amber-50); border-left: 3px solid var(--amber-600); color: var(--slate-600); }
+
+    /* ================================================================
+       PEER TABLE
+       ================================================================ */
+    .peer-wrap {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-md); overflow: hidden;
+    }
+    .peer-tbl { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+    .peer-tbl thead th {
+      background: var(--gray-50); padding: 4px 6px; text-align: right;
+      font-weight: 600; color: var(--slate-400); font-size: 6pt;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      border-bottom: 1.5px solid var(--gray-200);
+    }
+    .peer-tbl thead th:first-child { text-align: left; }
+    .peer-tbl tbody td {
+      padding: 3.5px 6px; text-align: right;
+      border-bottom: 0.5px solid var(--gray-100);
+    }
+    .peer-tbl tbody td:first-child { text-align: left; font-weight: 500; }
+    .peer-tbl .hl-row { background: var(--blue-50); }
+    .peer-tbl .hl-row td { color: var(--navy-900); font-weight: 700; }
+
+    /* ================================================================
+       ALLOCATION BAR
+       ================================================================ */
+    .alloc-bar {
+      display: flex; height: 24px; border-radius: var(--r-sm);
+      overflow: hidden; margin: 6px 0;
+    }
+    .alloc-seg {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6pt; font-weight: 700; color: var(--white);
+    }
+    .alloc-legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .alloc-leg-item { display: flex; align-items: center; gap: 3px; font-size: 7pt; }
+    .alloc-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+    /* ================================================================
+       HOLDINGS TABLE
+       ================================================================ */
+    .htable { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 7pt; }
+    .htable thead th {
+      padding: 3px 5px; text-align: left; font-weight: 600;
+      color: var(--slate-400); font-size: 5.5pt; text-transform: uppercase;
+      letter-spacing: 0.06em; border-bottom: 1.5px solid var(--gray-200);
+    }
+    .htable thead th:last-child { text-align: right; }
+    .htable tbody td {
+      padding: 3px 5px; border-bottom: 0.5px solid var(--gray-100);
+      color: var(--slate-600);
+    }
+    .htable tbody td:first-child { font-weight: 600; color: var(--navy-900); }
+    .htable tbody td:last-child { text-align: right; font-weight: 600; }
+    .wt-bar {
+      width: 40px; height: 4px; background: var(--gray-200);
+      border-radius: 2px; display: inline-block; vertical-align: middle; margin-left: 4px;
+    }
+    .wt-fill { height: 100%; background: var(--blue-600); border-radius: 2px; }
+
+    /* ================================================================
+       SECTOR BARS
+       ================================================================ */
+    .sec-row { display: flex; align-items: center; gap: 4px; margin: 2px 0; }
+    .sec-name {
+      width: 80px; font-size: 7pt; font-weight: 500; color: var(--slate-600);
+      flex-shrink: 0; text-align: right;
+    }
+    .sec-track { flex: 1; height: 12px; background: var(--gray-100); border-radius: 6px; overflow: hidden; }
+    .sec-fill {
+      height: 100%; border-radius: 6px; display: flex; align-items: center;
+      padding-left: 4px; font-size: 5pt; font-weight: 700; color: var(--white); min-width: 16px;
+    }
+    .sec-pct { width: 32px; text-align: right; font-size: 7pt; font-weight: 600; color: var(--navy-900); flex-shrink: 0; }
+
+    /* ================================================================
+       RATING BARS
+       ================================================================ */
+    .rat-row { display: flex; align-items: center; gap: 4px; margin: 2px 0; }
+    .rat-lbl { width: 52px; font-size: 7pt; font-weight: 600; color: var(--slate-600); text-align: right; flex-shrink: 0; }
+    .rat-bg { flex: 1; height: 12px; background: var(--gray-100); border-radius: 6px; overflow: hidden; }
+    .rat-fill {
+      height: 100%; border-radius: 6px; display: flex; align-items: center;
+      justify-content: flex-end; padding-right: 4px;
+      font-size: 5pt; font-weight: 700; color: var(--white);
+    }
+
+    /* ================================================================
+       RISK SCALE
+       ================================================================ */
+    .risk-scale { display: flex; gap: 1px; height: 22px; margin: 6px 0; }
+    .risk-seg {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      font-size: 7pt; font-weight: 700; color: var(--white); position: relative;
+    }
+    .risk-seg:first-child { border-radius: var(--r-sm) 0 0 var(--r-sm); }
+    .risk-seg:last-child { border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+    .risk-seg.active::after {
+      content: ''; position: absolute; top: -6px; left: 50%;
+      transform: translateX(-50%); width: 0; height: 0;
+      border-left: 4px solid transparent; border-right: 4px solid transparent;
+      border-top: 4px solid var(--navy-900);
+    }
+    .risk-labels { display: flex; justify-content: space-between; font-size: 6pt; color: var(--slate-400); }
+
+    /* ================================================================
+       METRICS STRIP
+       ================================================================ */
+    .met-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+    .met-item {
+      text-align: center; padding: 6px 4px;
+      background: var(--gray-50); border-radius: var(--r-sm); border: 1px solid var(--gray-200);
+    }
+    .met-val { font-size: 10pt; font-weight: 800; color: var(--navy-900); letter-spacing: -0.02em; }
+    .met-lbl {
+      font-size: 5pt; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--slate-400); margin-top: 1px;
+    }
+
+    /* ================================================================
+       SCENARIO TABLE
+       ================================================================ */
+    .sc-tbl {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      font-size: 7.5pt; border-radius: var(--r-md); overflow: hidden;
+      border: 1px solid var(--gray-200);
+    }
+    .sc-tbl thead th {
+      background: var(--navy-900); color: var(--white);
+      padding: 5px 8px; font-weight: 600; font-size: 6pt;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .sc-tbl tbody td {
+      padding: 4px 8px; border-bottom: 0.5px solid var(--gray-100); text-align: center;
+    }
+    .sc-tbl tbody td:first-child { text-align: left; font-weight: 600; color: var(--navy-900); }
+
+    /* ================================================================
+       OPP / RISK
+       ================================================================ */
+    .or-list { list-style: none; padding: 0; }
+    .or-list li {
+      padding: 3px 0; border-bottom: 0.5px solid var(--gray-100);
+      font-size: 7pt; line-height: 1.4; display: flex; gap: 4px; align-items: flex-start;
+    }
+    .or-list li::before {
+      content: ''; width: 4px; height: 4px; border-radius: 50%;
+      flex-shrink: 0; margin-top: 4px;
+    }
+    .opp-l li::before { background: var(--green-600); }
+    .rsk-l li::before { background: var(--red-600); }
+
+    /* ================================================================
+       ESG
+       ================================================================ */
+    .esg-card {
+      background: var(--green-50); border: 1px solid var(--green-100);
+      border-radius: var(--r-md); padding: 10px;
+    }
+    .esg-badge {
+      display: inline-flex; align-items: center; gap: 3px;
+      background: var(--green-100); color: var(--green-700);
+      padding: 2px 8px; border-radius: 100px;
+      font-size: 6pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+
+    /* ================================================================
+       TEAM
+       ================================================================ */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .team-card {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px; background: var(--gray-50);
+      border-radius: var(--r-sm); border: 1px solid var(--gray-200);
+    }
+    .team-av {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--navy-900); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 6pt; font-weight: 700; flex-shrink: 0;
+    }
+    .team-nm { font-weight: 600; font-size: 7.5pt; color: var(--navy-900); }
+    .team-rl { font-size: 6pt; color: var(--slate-400); }
+
+    /* ================================================================
+       INFO GRID
+       ================================================================ */
+    .info-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+    .info-row {
+      padding: 3px 0; border-bottom: 0.5px solid var(--gray-100);
+      display: flex; justify-content: space-between; gap: 8px;
+    }
+    .info-lbl { font-size: 7pt; color: var(--slate-400); }
+    .info-val { font-size: 7pt; font-weight: 600; color: var(--navy-900); text-align: right; }
+
+    /* ================================================================
+       CTA STRIP
+       ================================================================ */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+      border-radius: var(--r-md); padding: 12px 16px; color: var(--white);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; margin-top: 12px;
+    }
+    .cta-strip h3 { font-size: 9pt; font-weight: 700; margin-bottom: 1px; }
+    .cta-strip p { font-size: 7pt; opacity: 0.7; }
+    .cta-actions { display: flex; gap: 6px; }
+    .cta-btn {
+      display: inline-block; padding: 4px 12px; border-radius: 100px;
+      font-size: 7pt; font-weight: 600; text-decoration: none;
+    }
+    .cta-primary { background: var(--white); color: var(--navy-900); }
+    .cta-secondary { background: rgba(255,255,255,0.12); color: var(--white); border: 1px solid rgba(255,255,255,0.25); }
+
+    /* ================================================================
+       FOOTNOTES & FOOTER
+       ================================================================ */
+    .footnotes {
+      font-size: 6pt; color: var(--slate-400); line-height: 1.5;
+      margin-top: 10px; padding-top: 6px; border-top: 1px solid var(--gray-200);
+    }
+    .footnotes ol { padding-left: 12px; }
+    .footnotes li { margin-bottom: 3px; }
+
+    .footer-legal { font-size: 6.5pt; color: var(--slate-400); line-height: 1.6; }
+    .footer-legal p { margin-bottom: 5px; }
+    .footer-legal strong { color: var(--slate-600); }
+    .footer-legal a { color: var(--blue-600); }
+
+    /* ================================================================
+       ACCESSIBILITY
+       ================================================================ */
+    :focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; border-radius: 2px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* Utility */
+    .mt-8 { margin-top: 8px; }
+    .mt-10 { margin-top: 10px; }
+    .mt-12 { margin-top: 12px; }
+    .mb-4 { margin-bottom: 4px; }
+    .card-title { font-size: 8pt; font-weight: 700; color: var(--navy-900); margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" role="main">
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 1 — Cover: Header, Highlights, Investor Profile, Commentary
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 1: Overview and Key Highlights">
+
+    <!-- Header band -->
+    <div class="p1-header" role="banner">
+      <div class="p1-header-inner">
+        <div class="p1-brand">
+          <div class="p1-logo" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="2" y="8" width="6" height="18" rx="1" fill="#071935"/>
+              <rect x="11" y="4" width="6" height="22" rx="1" fill="#0342e4"/>
+              <rect x="20" y="1" width="6" height="25" rx="1" fill="#071935"/>
+            </svg>
+          </div>
+          <div>
+            <div class="p1-title">Allianz Income and Growth</div>
+            <div class="p1-subtitle">Multi-Asset Strategy &mdash; Share Class A (USD)</div>
+          </div>
+        </div>
+        <div class="p1-meta">
+          <span class="p1-badge">Monthly Factsheet</span>
+          <span class="p1-badge">UCITS</span>
+          <time class="p1-date" datetime="2026-02-28">28 February 2026</time>
+        </div>
+      </div>
+    </div>
+
+    <div class="p1-disclaimer">
+      <strong>Marketing communication.</strong> Please refer to the prospectus and Key Investor Information Document before making any final investment decisions.
+    </div>
+
+    <!-- Key Highlights -->
+    <section class="highlights" aria-labelledby="hl-h">
+      <div class="hl-header">
+        <div class="sec-icon" style="background:var(--blue-100)" aria-hidden="true">&#9889;</div>
+        <h2 id="hl-h" class="hl-title">Key Highlights &mdash; February 2026</h2>
+      </div>
+      <div class="hl-grid">
+        <div class="hl-card">
+          <div class="hl-label">1-Year Return</div>
+          <div class="hl-value v-pos" aria-label="1-year return: positive 11.03%">+11.03%</div>
+          <div class="hl-ctx">vs +8.5% peer median</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-label">Fund Size</div>
+          <div class="hl-value v-neut" aria-label="Fund size: 56.7 billion USD">$56.7B</div>
+          <div class="hl-ctx">One of largest in category</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-label">HY Yield to Maturity</div>
+          <div class="hl-value v-neut" aria-label="High yield yield to maturity: 6.79%">6.79%</div>
+          <div class="hl-ctx">Attractive income</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-label">3-Year Volatility</div>
+          <div class="hl-value v-amb" aria-label="3-year volatility: 10.19%">10.19%</div>
+          <div class="hl-ctx">Moderate risk</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-label">Month Return</div>
+          <div class="hl-value v-neg" aria-label="February return: negative 0.62%">&minus;0.62%</div>
+          <div class="hl-ctx">Market volatility</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investor Profile -->
+    <section class="inv-profile" aria-labelledby="ip-h">
+      <div class="sec-header" style="border:none;margin:0;padding:0">
+        <div class="sec-icon" style="background:var(--blue-100)" aria-hidden="true">&#128100;</div>
+        <div>
+          <h2 id="ip-h" class="sec-title" style="font-size:9pt">Who Is This Fund For?</h2>
+          <p class="sec-desc">Understanding if this fund fits your investment needs</p>
+        </div>
+      </div>
+      <div class="prof-grid">
+        <div class="prof-item"><span class="prof-lbl">Target Investor</span><span class="prof-val">Growth &amp; Income seekers</span></div>
+        <div class="prof-item"><span class="prof-lbl">Time Horizon</span><span class="prof-val">5+ years (long-term)</span></div>
+        <div class="prof-item"><span class="prof-lbl">Risk Tolerance</span><span class="prof-val">Moderate to moderate-high</span></div>
+        <div class="prof-item"><span class="prof-lbl">Portfolio Role</span><span class="prof-val">Core multi-asset allocation</span></div>
+        <div class="prof-item"><span class="prof-lbl">Income Type</span><span class="prof-val">Regular distributions (USD)</span></div>
+        <div class="prof-item"><span class="prof-lbl">Use Case</span><span class="prof-val">Diversified US equities, HY bonds &amp; convertibles</span></div>
+      </div>
+    </section>
+
+    <!-- Manager Commentary -->
+    <section class="mt-10" aria-labelledby="cm-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--amber-100)" aria-hidden="true">&#128172;</div>
+        <div>
+          <h2 id="cm-h" class="sec-title">Manager Commentary &amp; Market Context</h2>
+          <p class="sec-desc">Monthly insights from the investment team</p>
+        </div>
+      </div>
+      <div class="commentary">
+        <p><strong style="color:var(--navy-900)">Market environment:</strong> February saw a modest pullback in US equities as investors digested mixed economic signals. The S&amp;P 500 retreated amid persistent inflation readings and trade policy uncertainty. HY spreads widened slightly but remained near historical tights, reflecting resilient corporate fundamentals.</p>
+        <p><strong style="color:var(--navy-900)">Performance drivers:</strong> The fund returned &minus;0.62%. The equity sleeve was the primary detractor as technology holdings (22.8%) faced profit-taking. The HY allocation provided a cushion through steady coupon income, and select convertible positions in healthcare and industrials contributed positively through favorable conversion dynamics.</p>
+        <p><strong style="color:var(--navy-900)">Positioning &amp; outlook:</strong> We maintain our balanced three-sleeve approach (~1/3 each). We see the current yield environment as attractive for income generation. We have modestly increased duration in the HY sleeve to lock in yields and remain constructive on US corporate credit quality.</p>
+        <div class="cm-author">
+          <div class="cm-avatar" aria-hidden="true">JK</div>
+          <div><div class="cm-name">Justin Kass, CFA</div><div class="cm-role">Lead Portfolio Manager &middot; since March 2022</div></div>
+        </div>
+      </div>
+      <div class="outlook-grid" role="list" aria-label="Market outlook indicators">
+        <div class="outlook-item" role="listitem"><div class="outlook-ind" aria-hidden="true">&#9650;</div><div class="outlook-lbl">US Equities</div><div class="outlook-val" style="color:var(--green-600)">Moderately Positive</div></div>
+        <div class="outlook-item" role="listitem"><div class="outlook-ind" aria-hidden="true">&#9654;</div><div class="outlook-lbl">HY Credit</div><div class="outlook-val" style="color:var(--green-600)">Constructive</div></div>
+        <div class="outlook-item" role="listitem"><div class="outlook-ind" aria-hidden="true">&#9654;</div><div class="outlook-lbl">Convertibles</div><div class="outlook-val">Neutral to Positive</div></div>
+        <div class="outlook-item" role="listitem"><div class="outlook-ind" aria-hidden="true">&#9660;</div><div class="outlook-lbl">Duration Risk</div><div class="outlook-val" style="color:var(--amber-600)">Cautious</div></div>
+      </div>
+    </section>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">1 / 6</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 2 — Performance
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 2: Performance">
+
+    <section aria-labelledby="perf-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--green-100)" aria-hidden="true">&#128200;</div>
+        <div>
+          <h2 id="perf-h" class="sec-title">Performance</h2>
+          <p class="sec-desc">Net of fees, in USD. Past performance does not predict future returns.</p>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-box">
+        <div class="chart-area" role="img" aria-label="Growth of USD 100 invested: The fund grew from 100 in Feb 2016 to approximately 230 in Feb 2026, with a significant drawdown in 2022 followed by strong recovery.">
+          <svg viewBox="0 0 1000 280" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0342e4" stop-opacity="0.12"/>
+                <stop offset="100%" stop-color="#0342e4" stop-opacity="0.01"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,220 L100,180 200,160 300,155 400,148 500,100 600,102 700,118 800,88 900,78 1000,65 L1000,280 L0,280 Z" fill="url(#ag)"/>
+            <polyline points="0,220 100,180 200,160 300,155 400,148 500,100 600,102 700,118 800,88 900,78 1000,65" fill="none" stroke="#0342e4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,225 100,198 200,182 300,175 400,168 500,125 600,128 700,138 800,115 900,108 1000,95" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+            <circle cx="500" cy="100" r="4" fill="#0342e4"/><circle cx="700" cy="118" r="4" fill="#dc2626"/><circle cx="1000" cy="65" r="4" fill="#0342e4"/>
+          </svg>
+          <div class="ch-ann" style="left:44%;top:16%;color:var(--green-600)">2021: +31.21% recovery</div>
+          <div class="ch-ann" style="left:62%;top:26%;color:var(--red-600)">2022: &minus;19.71% drawdown</div>
+          <div class="ch-ann" style="right:1%;top:6%;color:var(--blue-600)">+130% total (10Y)</div>
+        </div>
+        <div class="ch-legend">
+          <div class="ch-leg-item"><span class="ch-dot" style="background:var(--blue-600)" aria-hidden="true"></span>Allianz Income &amp; Growth</div>
+          <div class="ch-leg-item"><span class="ch-dot" style="background:var(--slate-300)" aria-hidden="true"></span>Peer median (illustrative)</div>
+        </div>
+      </div>
+
+      <!-- Performance tables -->
+      <div class="two-col mt-10">
+        <div class="card">
+          <table class="ptable" aria-label="Cumulative performance">
+            <caption>Cumulative &amp; Annualised Returns<sup>1</sup></caption>
+            <thead><tr><th scope="col">Period</th><th scope="col">Fund</th><th scope="col">Peer Median</th></tr></thead>
+            <tbody>
+              <tr><td>1 month</td><td class="p-neg">&minus;0.62%</td><td>&minus;0.45%</td></tr>
+              <tr><td>3 months</td><td class="p-pos">+1.11%</td><td>+0.82%</td></tr>
+              <tr><td>6 months</td><td class="p-pos">+4.54%</td><td>+3.90%</td></tr>
+              <tr><td>1 year</td><td class="p-pos">+11.03%</td><td>+8.50%</td></tr>
+              <tr><td>3 years (cum.)</td><td class="p-pos">+39.47%</td><td>+24.60%</td></tr>
+              <tr><td>3 years (p.a.)</td><td class="p-pos">+11.73%</td><td>+7.62%</td></tr>
+              <tr><td>5 years (p.a.)</td><td class="p-pos">+4.71%</td><td>+3.80%</td></tr>
+              <tr><td>10 years (cum.)</td><td class="p-pos">+130.18%</td><td>+95.00%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <table class="ptable" aria-label="Calendar year returns">
+            <caption>Calendar Year Returns<sup>1</sup></caption>
+            <thead><tr><th scope="col">Year</th><th scope="col">Fund</th><th scope="col">Peer Median</th></tr></thead>
+            <tbody>
+              <tr><td>2025 YTD</td><td class="p-pos">+0.95%</td><td>+0.60%</td></tr>
+              <tr><td>2024</td><td class="p-pos">+10.53%</td><td>+8.20%</td></tr>
+              <tr><td>2023</td><td class="p-pos">+9.94%</td><td>+7.50%</td></tr>
+              <tr><td>2022</td><td class="p-neg">&minus;19.71%</td><td>&minus;15.30%</td></tr>
+              <tr><td>2021</td><td class="p-pos">+11.73%</td><td>+8.90%</td></tr>
+              <tr><td>2020</td><td class="p-pos">+21.90%</td><td>+12.40%</td></tr>
+              <tr><td>2019</td><td class="p-pos">+19.55%</td><td>+14.20%</td></tr>
+              <tr><td>2018</td><td class="p-neg">&minus;4.90%</td><td>&minus;4.60%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="callout co-blue mt-8">
+        <strong>What drove returns?</strong>
+        Over the past 12 months, the fund's +11.03% return outperformed the peer group median by ~2.5 percentage points. Key contributors were strong equity selection in technology and industrials, combined with above-average carry from the high-yield sleeve. The balanced three-asset-class structure continued to deliver smoother returns versus pure equity or fixed income strategies.
+      </div>
+    </section>
+
+    <!-- Peer Comparison -->
+    <section class="mt-12" aria-labelledby="peer-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--blue-100)" aria-hidden="true">&#128202;</div>
+        <div>
+          <h2 id="peer-h" class="sec-title">Peer Group Comparison</h2>
+          <p class="sec-desc">USD Moderate Allocation category &mdash; indicative peer data</p>
+        </div>
+      </div>
+      <div class="peer-wrap">
+        <table class="peer-tbl" aria-label="Peer comparison">
+          <thead><tr><th scope="col">Fund</th><th scope="col">1Y Return</th><th scope="col">3Y p.a.</th><th scope="col">Vol (3Y)</th><th scope="col">Sharpe (3Y)</th><th scope="col">Max DD</th></tr></thead>
+          <tbody>
+            <tr class="hl-row"><td><strong>Allianz Income &amp; Growth</strong></td><td class="p-pos">+11.03%</td><td class="p-pos">+11.73%</td><td>10.19%</td><td>0.11</td><td>&minus;21.64%</td></tr>
+            <tr><td>Peer 1 &mdash; Large Multi-Asset</td><td>+9.20%</td><td>+8.40%</td><td>9.50%</td><td>0.08</td><td>&minus;18.50%</td></tr>
+            <tr><td>Peer 2 &mdash; Balanced Growth</td><td>+8.10%</td><td>+7.20%</td><td>11.30%</td><td>0.05</td><td>&minus;22.10%</td></tr>
+            <tr><td>Peer 3 &mdash; Global Allocation</td><td>+7.50%</td><td>+6.80%</td><td>8.90%</td><td>0.04</td><td>&minus;16.20%</td></tr>
+            <tr><td>Category Median</td><td>+8.50%</td><td>+7.62%</td><td>10.00%</td><td>0.06</td><td>&minus;19.00%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout co-green mt-8">
+        <strong>Peer positioning</strong>
+        The fund ranks in the top quartile of its Morningstar category over 1 and 3 years, with higher absolute returns partly offset by slightly above-median volatility reflecting its growth-oriented equity tilt.
+      </div>
+    </section>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">2 / 6</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 3 — Portfolio Composition
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 3: Portfolio Composition">
+
+    <section aria-labelledby="port-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--blue-100)" aria-hidden="true">&#128176;</div>
+        <div>
+          <h2 id="port-h" class="sec-title">Portfolio Composition</h2>
+          <p class="sec-desc">Asset allocation, sector exposure, and top holdings as of 28 February 2026</p>
+        </div>
+      </div>
+
+      <!-- Asset Allocation -->
+      <div class="card">
+        <div class="card-title">Asset Allocation<sup>2</sup></div>
+        <div class="alloc-bar" role="img" aria-label="Asset allocation: Equity 31.66%, HY Bonds 30.90%, Convertibles 30.85%, Cash 6.59%">
+          <div class="alloc-seg" style="width:31.66%;background:var(--blue-600)" title="Equity: 31.66%">31.7%</div>
+          <div class="alloc-seg" style="width:30.90%;background:var(--navy-900)" title="HY Bond: 30.90%">30.9%</div>
+          <div class="alloc-seg" style="width:30.85%;background:#6366f1" title="Convertible: 30.85%">30.9%</div>
+          <div class="alloc-seg" style="width:6.59%;background:var(--slate-300)" title="Cash: 6.59%">6.6%</div>
+        </div>
+        <div class="alloc-legend" aria-hidden="true">
+          <div class="alloc-leg-item"><span class="alloc-dot" style="background:var(--blue-600)"></span>Equity (31.66%)</div>
+          <div class="alloc-leg-item"><span class="alloc-dot" style="background:var(--navy-900)"></span>HY Bond (30.90%)</div>
+          <div class="alloc-leg-item"><span class="alloc-dot" style="background:#6366f1"></span>Convertible (30.85%)</div>
+          <div class="alloc-leg-item"><span class="alloc-dot" style="background:var(--slate-300)"></span>Cash &amp; Other (6.59%)</div>
+        </div>
+        <div class="callout co-blue" style="margin-top:6px">
+          <strong>Why this balanced structure?</strong>
+          The roughly equal three-way split provides diversification: equities offer growth potential, high-yield bonds generate income, and convertibles provide asymmetric return profiles with equity upside and bond-like downside protection.
+        </div>
+      </div>
+
+      <!-- Holdings + Sectors -->
+      <div class="two-col mt-10">
+        <div class="card">
+          <div class="card-title">Top 10 Holdings<sup>3,4</sup></div>
+          <table class="htable" aria-label="Top 10 fund holdings">
+            <thead><tr><th scope="col">Holding</th><th scope="col">Type</th><th scope="col">Weight</th></tr></thead>
+            <tbody>
+              <tr><td>NVIDIA Corp</td><td>Equity</td><td>2.90%<span class="wt-bar"><span class="wt-fill" style="width:97%"></span></span></td></tr>
+              <tr><td>Apple Inc</td><td>Equity</td><td>2.37%<span class="wt-bar"><span class="wt-fill" style="width:82%"></span></span></td></tr>
+              <tr><td>Alphabet Inc (A)</td><td>Equity</td><td>1.76%<span class="wt-bar"><span class="wt-fill" style="width:61%"></span></span></td></tr>
+              <tr><td>Microsoft Corp</td><td>Equity</td><td>1.66%<span class="wt-bar"><span class="wt-fill" style="width:57%"></span></span></td></tr>
+              <tr><td>Amazon.com Inc</td><td>Equity</td><td>1.26%<span class="wt-bar"><span class="wt-fill" style="width:43%"></span></span></td></tr>
+              <tr><td>Western Digital Conv 3.0% '28</td><td>Convert.</td><td>1.26%<span class="wt-bar"><span class="wt-fill" style="width:43%"></span></span></td></tr>
+              <tr><td>Lumentum Conv 0.5% '28</td><td>Convert.</td><td>0.97%<span class="wt-bar"><span class="wt-fill" style="width:33%"></span></span></td></tr>
+              <tr><td>Wells Fargo 7.5% '98</td><td>HY Bond</td><td>0.95%<span class="wt-bar"><span class="wt-fill" style="width:33%"></span></span></td></tr>
+              <tr><td>Broadcom Inc</td><td>Equity</td><td>0.93%<span class="wt-bar"><span class="wt-fill" style="width:32%"></span></span></td></tr>
+              <tr><td>Welltower OP Conv 3.125% '29</td><td>Convert.</td><td>0.89%<span class="wt-bar"><span class="wt-fill" style="width:31%"></span></span></td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:5.5pt;color:var(--slate-400);margin-top:5px">Top 10 = 14.95% of portfolio. For illustrative purposes only.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Equity Sector Allocation<sup>2</sup></div>
+          <div role="list" aria-label="Sector allocation">
+            <div class="sec-row" role="listitem"><span class="sec-name">Technology</span><div class="sec-track"><div class="sec-fill" style="width:91%;background:var(--blue-600)"></div></div><span class="sec-pct">22.83%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Industrials</span><div class="sec-track"><div class="sec-fill" style="width:50%;background:var(--navy-800)"></div></div><span class="sec-pct">12.38%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Cons. Disc.</span><div class="sec-track"><div class="sec-fill" style="width:46%;background:#6366f1"></div></div><span class="sec-pct">11.47%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Financials</span><div class="sec-track"><div class="sec-fill" style="width:39%;background:var(--green-600)"></div></div><span class="sec-pct">9.86%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Comms.</span><div class="sec-track"><div class="sec-fill" style="width:39%;background:var(--amber-600)"></div></div><span class="sec-pct">9.68%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Health Care</span><div class="sec-track"><div class="sec-fill" style="width:38%;background:#ec4899"></div></div><span class="sec-pct">9.45%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Energy</span><div class="sec-track"><div class="sec-fill" style="width:17%;background:#f97316"></div></div><span class="sec-pct">4.27%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Utilities</span><div class="sec-track"><div class="sec-fill" style="width:16%;background:#14b8a6"></div></div><span class="sec-pct">4.12%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Materials</span><div class="sec-track"><div class="sec-fill" style="width:14%;background:#8b5cf6"></div></div><span class="sec-pct">3.62%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Real Estate</span><div class="sec-track"><div class="sec-fill" style="width:13%;background:#64748b"></div></div><span class="sec-pct">3.18%</span></div>
+            <div class="sec-row" role="listitem"><span class="sec-name">Cons. Staples</span><div class="sec-track"><div class="sec-fill" style="width:10%;background:var(--slate-400)"></div></div><span class="sec-pct">2.53%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credit Quality -->
+      <div class="card mt-10">
+        <div class="card-title">Fixed Income Credit Quality<sup>2</sup></div>
+        <div style="max-width:420px" role="list" aria-label="Credit rating distribution">
+          <div class="rat-row" role="listitem"><span class="rat-lbl">BBB (IG)</span><div class="rat-bg"><div class="rat-fill" style="width:4.6%;background:var(--green-600);min-width:24px">2.3%</div></div></div>
+          <div class="rat-row" role="listitem"><span class="rat-lbl">BB</span><div class="rat-bg"><div class="rat-fill" style="width:52.35%;background:var(--blue-600)">52.4%</div></div></div>
+          <div class="rat-row" role="listitem"><span class="rat-lbl">B</span><div class="rat-bg"><div class="rat-fill" style="width:41.45%;background:var(--navy-900)">41.5%</div></div></div>
+          <div class="rat-row" role="listitem"><span class="rat-lbl">CCC &amp; below</span><div class="rat-bg"><div class="rat-fill" style="width:6.76%;background:var(--red-600);min-width:24px">3.4%</div></div></div>
+          <div class="rat-row" role="listitem"><span class="rat-lbl">Not Rated</span><div class="rat-bg"><div class="rat-fill" style="width:1.08%;background:var(--slate-400);min-width:24px">0.5%</div></div></div>
+        </div>
+        <div class="callout co-blue" style="margin-top:6px">
+          <strong>Credit positioning</strong>
+          The HY portfolio is primarily invested in BB and B-rated credits, balancing yield pickup with credit quality. The effective duration of 3.30 years keeps interest rate sensitivity moderate.
+        </div>
+      </div>
+    </section>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">3 / 6</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 4 — Risk, Scenarios, Opportunities & Risks
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 4: Risk Profile, Scenarios, Opportunities & Risks">
+
+    <!-- Risk Profile -->
+    <section aria-labelledby="risk-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--red-100)" aria-hidden="true">&#9888;&#65039;</div>
+        <div>
+          <h2 id="risk-h" class="sec-title">Risk Profile &amp; Key Metrics</h2>
+          <p class="sec-desc">Understanding the fund's risk characteristics</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Risk Indicator<sup>5</sup></div>
+          <div class="risk-scale" role="img" aria-label="Risk indicator: level 4 of 7">
+            <div class="risk-seg" style="background:#16a34a">1</div>
+            <div class="risk-seg" style="background:#4ade80">2</div>
+            <div class="risk-seg" style="background:#a3e635">3</div>
+            <div class="risk-seg active" style="background:#facc15;color:var(--navy-900)">4</div>
+            <div class="risk-seg" style="background:#f97316">5</div>
+            <div class="risk-seg" style="background:#ef4444">6</div>
+            <div class="risk-seg" style="background:#b91c1c">7</div>
+          </div>
+          <div class="risk-labels"><span>Lower risk</span><span>Higher risk</span></div>
+          <p style="font-size:6pt;color:var(--slate-400);margin-top:5px">Assumes recommended holding period. Even category 1 is not risk-free.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Key Risk Figures</div>
+          <div class="met-strip">
+            <div class="met-item"><div class="met-val">10.19%</div><div class="met-lbl">Vol (3Y)</div></div>
+            <div class="met-item"><div class="met-val">7.49%</div><div class="met-lbl">Vol (5Y)</div></div>
+            <div class="met-item"><div class="met-val">0.11</div><div class="met-lbl">Sharpe (3Y)</div></div>
+            <div class="met-item"><div class="met-val">0.93</div><div class="met-lbl">Sharpe (5Y)</div></div>
+            <div class="met-item"><div class="met-val">&minus;21.6%</div><div class="met-lbl">Max DD</div></div>
+            <div class="met-item"><div class="met-val">23 mo</div><div class="met-lbl">Recovery</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="callout co-amber mt-8">
+        <strong>What this means for you</strong>
+        In a worst case, the fund historically experienced a maximum decline of 21.64%, taking 23 months to recover. The 3-year Sharpe ratio of 0.11 reflects the challenging 2022 environment, while the 5-year ratio of 0.93 better represents risk-adjusted returns over a full market cycle.
+      </div>
+    </section>
+
+    <!-- Scenario Guidance -->
+    <section class="mt-12" aria-labelledby="sc-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--amber-100)" aria-hidden="true">&#128300;</div>
+        <div>
+          <h2 id="sc-h" class="sec-title">Scenario Guidance</h2>
+          <p class="sec-desc">Illustrative outcomes based on historical patterns. Not forecasts.</p>
+        </div>
+      </div>
+      <div class="card">
+        <table class="sc-tbl" aria-label="Illustrative scenarios for $10,000 over 5 years">
+          <thead><tr><th scope="col">Scenario</th><th scope="col">Ann. Return</th><th scope="col">$10,000 after 5Y</th><th scope="col">Historical Context</th></tr></thead>
+          <tbody>
+            <tr><td style="color:var(--red-600)">Stress</td><td>&minus;12% p.a.</td><td>$5,277</td><td>Similar to 2008 / severe recession</td></tr>
+            <tr><td style="color:var(--amber-600)">Unfavourable</td><td>&minus;3% p.a.</td><td>$8,587</td><td>Prolonged low-growth environment</td></tr>
+            <tr><td>Moderate</td><td>+5% p.a.</td><td>$12,763</td><td>Aligned with long-term average</td></tr>
+            <tr><td style="color:var(--green-600)">Favourable</td><td>+12% p.a.</td><td>$17,623</td><td>Strong equity &amp; credit markets</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:5.5pt;color:var(--slate-400);margin-top:5px">For illustrative purposes only. Past performance does not predict future returns.</p>
+      </div>
+    </section>
+
+    <!-- Opportunities & Risks -->
+    <section class="mt-12" aria-labelledby="or-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--green-100)" aria-hidden="true">&#9878;&#65039;</div>
+        <div>
+          <h2 id="or-h" class="sec-title">Opportunities &amp; Risks</h2>
+          <p class="sec-desc">Key factors to consider before investing</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card" style="border-top:2px solid var(--green-600)">
+          <div class="card-title" style="color:var(--green-700)">Opportunities</div>
+          <ul class="or-list opp-l" aria-label="Opportunities">
+            <li>Attractive potential returns combining equities, HY bonds, and convertible bonds</li>
+            <li>Access to the US capital market &mdash; deepest and most liquid globally</li>
+            <li>Broad diversification across hundreds of securities reduces single-name risk</li>
+            <li>Additional return potential from active security analysis and tactical allocation</li>
+            <li>Currency gains possible for non-USD investors in unhedged share classes</li>
+          </ul>
+        </div>
+        <div class="card" style="border-top:2px solid var(--red-600)">
+          <div class="card-title" style="color:var(--red-700)">Risks</div>
+          <ul class="or-list rsk-l" aria-label="Risks">
+            <li>All three asset classes may be subject to volatility; fund price may fluctuate significantly</li>
+            <li>US market underperformance could disproportionately impact the fund</li>
+            <li>HY bonds carry higher credit risk; defaults could impact returns</li>
+            <li>Success of active management and security selection is not guaranteed</li>
+            <li>Currency losses possible in unhedged share classes for non-USD investors</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">4 / 6</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 5 — ESG, Team, Fund Information
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 5: ESG, Team, Fund Information">
+
+    <!-- ESG -->
+    <section aria-labelledby="esg-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--green-100)" aria-hidden="true">&#127793;</div>
+        <div>
+          <h2 id="esg-h" class="sec-title">ESG &amp; Sustainability Considerations</h2>
+          <p class="sec-desc">How environmental, social, and governance factors are considered</p>
+        </div>
+      </div>
+      <div class="esg-card">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap">
+          <span class="esg-badge">Article 6 &mdash; SFDR</span>
+          <span class="esg-badge">ESG Integration</span>
+        </div>
+        <p style="font-size:7.5pt;line-height:1.6;color:var(--slate-600);margin-bottom:6px">
+          While this fund does not have sustainable investment as its objective, ESG factors are integrated into the investment analysis process. The investment team considers material ESG risks as part of fundamental research across all three asset sleeves. AllianzGI applies firm-wide exclusion policies covering controversial weapons and other areas.
+        </p>
+        <p style="font-size:7pt;line-height:1.5;color:var(--slate-500)">
+          For detailed information, please refer to the fund's pre-contractual disclosures and the AllianzGI Sustainability and Stewardship Report at <a href="https://www.allianzgi.com" style="color:var(--green-700);font-weight:600">allianzgi.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Investment Team -->
+    <section class="mt-12" aria-labelledby="team-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--blue-100)" aria-hidden="true">&#128101;</div>
+        <div>
+          <h2 id="team-h" class="sec-title">Investment Team</h2>
+          <p class="sec-desc">Managed by Voya Investment Management LLC</p>
+        </div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="team-av" aria-hidden="true">JK</div><div><div class="team-nm">Justin Kass</div><div class="team-rl">Lead PM &middot; since Mar 2022</div></div></div>
+        <div class="team-card"><div class="team-av" aria-hidden="true">MY</div><div><div class="team-nm">Michael Yee</div><div class="team-rl">Portfolio Manager &middot; since Mar 2022</div></div></div>
+        <div class="team-card"><div class="team-av" aria-hidden="true">DO</div><div><div class="team-nm">David Oberto</div><div class="team-rl">Portfolio Manager &middot; since Mar 2022</div></div></div>
+      </div>
+    </section>
+
+    <!-- Fund Information -->
+    <section class="mt-12" aria-labelledby="fi-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--gray-200)" aria-hidden="true">&#128196;</div>
+        <div>
+          <h2 id="fi-h" class="sec-title">Fund Information</h2>
+          <p class="sec-desc">Key facts, share class data, and fee details</p>
+        </div>
+      </div>
+      <div class="three-col">
+        <div class="card">
+          <div class="card-title">Key Facts</div>
+          <div class="info-grid">
+            <div class="info-row"><span class="info-lbl">Asset class</span><span class="info-val">Multi Asset</span></div>
+            <div class="info-row"><span class="info-lbl">Fund launch</span><span class="info-val">31 May 2011</span></div>
+            <div class="info-row"><span class="info-lbl">Currency</span><span class="info-val">USD</span></div>
+            <div class="info-row"><span class="info-lbl">Fund size</span><span class="info-val">$56,704.03M</span></div>
+            <div class="info-row"><span class="info-lbl">Domicile</span><span class="info-val">Luxembourg</span></div>
+            <div class="info-row"><span class="info-lbl">FY end</span><span class="info-val">31 December</span></div>
+            <div class="info-row"><span class="info-lbl">ISIN</span><span class="info-val">LU0964807845</span></div>
+            <div class="info-row"><span class="info-lbl">WKN</span><span class="info-val">A1W4VN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Share Class A (USD)</div>
+          <div class="info-grid">
+            <div class="info-row"><span class="info-lbl">Launch date</span><span class="info-val">1 Oct 2013</span></div>
+            <div class="info-row"><span class="info-lbl">SC size</span><span class="info-val">$434.89M</span></div>
+            <div class="info-row"><span class="info-lbl">Income</span><span class="info-val">Distributing</span></div>
+            <div class="info-row"><span class="info-lbl">Dealing</span><span class="info-val">Daily</span></div>
+            <div class="info-row"><span class="info-lbl">Morningstar</span><span class="info-val" aria-label="3 stars">&#9733;&#9733;&#9733;</span></div>
+            <div class="info-row"><span class="info-lbl">Category</span><span class="info-val">USD Moderate Alloc.</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Fees &amp; Charges<sup>6</sup></div>
+          <div class="info-grid">
+            <div class="info-row"><span class="info-lbl">Front-end load</span><span class="info-val">4.00% (max 5.00%)</span></div>
+            <div class="info-row"><span class="info-lbl">All-in fee p.a.</span><span class="info-val">1.50%</span></div>
+            <div class="info-row"><span class="info-lbl">TER</span><span class="info-val">1.56%</span></div>
+            <div class="info-row"><span class="info-lbl">Custodian</span><span class="info-val">State Street Int'l</span></div>
+            <div class="info-row"><span class="info-lbl">Mgmt Co.</span><span class="info-val">AllianzGI GmbH</span></div>
+            <div class="info-row"><span class="info-lbl">Inv. Mgr</span><span class="info-val">Voya Inv. Mgmt LLC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FI metrics -->
+      <div class="card mt-8">
+        <div class="card-title">Fixed Income Key Metrics</div>
+        <div class="met-strip" style="grid-template-columns:repeat(3,1fr)">
+          <div class="met-item"><div class="met-val">3.30</div><div class="met-lbl">Eff. Duration (HY)</div></div>
+          <div class="met-item"><div class="met-val">6.79%</div><div class="met-lbl">Yield to Maturity<sup>7</sup></div></div>
+          <div class="met-item"><div class="met-val">6.44%</div><div class="met-lbl">Yield to Worst<sup>8</sup></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-strip" aria-labelledby="cta-h">
+      <div><h3 id="cta-h">Want to learn more?</h3><p>Access the full prospectus, KID, and performance data on our website.</p></div>
+      <div class="cta-actions">
+        <a href="https://www.allianzgi.com" class="cta-btn cta-primary">Visit allianzgi.com</a>
+        <a href="#" class="cta-btn cta-secondary">Download KID</a>
+      </div>
+    </div>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">5 / 6</div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PAGE 6 — Footnotes & Disclaimers
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="page" role="region" aria-label="Page 6: Footnotes and Legal Disclaimers">
+
+    <section aria-labelledby="fn-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--gray-200)" aria-hidden="true">&#128221;</div>
+        <div>
+          <h2 id="fn-h" class="sec-title">Footnotes</h2>
+        </div>
+      </div>
+      <div class="footnotes" style="border:none;margin:0;padding:0">
+        <ol>
+          <li>Performance calculated based on NAV per unit/share (front-end load deducted in first year), assuming distributions reinvested. Calculation uses BVI method. Past performance does not predict future returns. Source: IDS GmbH (unless otherwise indicated). All performance data prior to share class launch (01/10/2013) refers to Allianz Income and Growth - AT - USD (ISIN LU0689472784).</li>
+          <li>For guidance only and not indicative of future allocation.</li>
+          <li>The fund can invest in other funds (target funds).</li>
+          <li>Securities mentioned are for illustrative purposes only and do not constitute a recommendation to buy or sell.</li>
+          <li>The Risk Indicator shows how likely it is that the product will lose money because of market movements or inability to pay. Even the lowest category does not mean risk-free.</li>
+          <li>Sales charges: up to 100% of front-end load may be collected by distributor. The all-in fee includes management, administration and distribution fees.</li>
+          <li>Yield to maturity is the weighted average of YTM of bonds held. It is a portfolio characteristic and does not reflect actual fund income. Expenses are not deducted.</li>
+          <li>Yield to worst represents the lowest potential yield (excluding default). Calculation before currency hedging. Not suitable as indicator of future performance.</li>
+        </ol>
+        <p style="margin-top:4px"><strong>Morningstar Rating:</strong> &copy; Morningstar, Inc. All rights reserved. Rating as of 31/01/2026. Top 10%: 5 stars; next 22.5%: 4 stars; middle 35%: 3 stars; next 22.5%: 2 stars; bottom 10%: 1 star.</p>
+        <p><strong>Morningstar Style Box:</strong> &copy; Morningstar, Inc. This fund appeared as Large Blend at 31/12/2025.</p>
+      </div>
+    </section>
+
+    <section class="mt-10" aria-labelledby="disc-h">
+      <div class="sec-header">
+        <div class="sec-icon" style="background:var(--gray-200)" aria-hidden="true">&#128220;</div>
+        <div>
+          <h2 id="disc-h" class="sec-title">Important Information &amp; Disclaimers</h2>
+        </div>
+      </div>
+      <footer class="footer-legal" role="contentinfo">
+        <p>Investing involves risk. The value of an investment and the income from it may fall as well as rise and investors might not get back the full amount invested. Investing in fixed income instruments may expose investors to various risks, including but not limited to creditworthiness, interest rate, liquidity and restricted flexibility risks. Changes to the economic environment and market conditions may affect these risks, resulting in an adverse effect to the value of the investment.</p>
+
+        <p>During periods of rising nominal interest rates, the values of fixed income instruments are generally expected to decline. Conversely, during periods of declining interest rates, values are generally expected to rise. Liquidity risk may possibly delay or prevent account withdrawals or redemptions.</p>
+
+        <p>Allianz Income and Growth is a sub-fund of Allianz Global Investors Fund SICAV, an open-ended investment company with variable share capital organised under the laws of Luxembourg. The value of units/shares may be subject to increased volatility. Past performance does not predict future returns.</p>
+
+        <p>If the currency in which the past performance is displayed differs from the currency of the country in which the investor resides, then the investor should be aware that due to exchange rate fluctuations the performance shown may be higher or lower if converted into the investor&rsquo;s local currency. This is for information only and not to be construed as a solicitation or an invitation to make an offer, to conclude a contract, or to buy or sell any securities.</p>
+
+        <p><strong>For investors in the United Kingdom:</strong> This Fund is authorised overseas but not in the United Kingdom. Domiciled in Luxembourg, authorised by the CSSF. Recognised in the UK under the Overseas Funds Regime. Managed by Allianz Global Investors GmbH (authorised by BaFin). The Financial Ombudsman Service is unlikely to consider complaints related to the scheme. Investors can submit complaints to the Facilities Agent (Allianz Global Investors UK Limited).</p>
+
+        <p>This is a marketing communication issued by Allianz Global Investors GmbH and approved by Allianz Global Investors UK Limited, 199 Bishopsgate, London, EC2M 3TY, <a href="https://www.allianzglobalinvestors.co.uk">allianzglobalinvestors.co.uk</a>. Allianz Global Investors UK Limited (FRN 959195) is authorised and regulated by the Financial Conduct Authority (<a href="https://www.fca.org.uk">fca.org.uk</a>).</p>
+
+        <p>The Summary of Investor Rights is available in English, French, German, Italian and Spanish at <a href="https://regulatory.allianzgi.com/en/investors-rights">regulatory.allianzgi.com/en/investors-rights</a>.</p>
+
+        <p style="margin-top:10px;color:var(--slate-600);font-weight:600;font-size:7pt">Allianz Global Investors &middot; February 2026</p>
+      </footer>
+    </section>
+
+    <div class="page-footer-line"></div>
+    <div class="page-footer-brand">ALLIANZ GLOBAL INVESTORS</div>
+    <div class="page-number">6 / 6</div>
+  </div>
+
+  </main>
+</body>
+</html>

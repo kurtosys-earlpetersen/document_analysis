@@ -13,5 +13,6 @@ data/
 .session_token
 *.pdf
 *.html
+!docs/redesigned_factsheet.html
 *.sql
 echarts-thousands-separator.md
