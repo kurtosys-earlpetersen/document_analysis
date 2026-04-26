@@ -1,6 +1,6 @@
 # InDesign Style Guide — Allianz Income and Growth Factsheet
 
-Companion reference for `redesigned_factsheet_indesign.xml`. This document defines every Paragraph Style, Character Style, Table Style, colour swatch, and template setup needed in InDesign so the XML import auto-maps correctly.
+Companion reference for `allianz_factsheet_indesign.xmp`. This document defines every Paragraph Style, Character Style, Table Style, colour swatch, and template setup needed in InDesign so the XML import auto-maps correctly.
 
 ---
 
@@ -252,7 +252,7 @@ Create the following table styles and cell styles:
 3. Place text frames on each page (primary story frame + footer frames)
 
 ### Step 2: Import XML
-1. **File > Import XML** → select `redesigned_factsheet_indesign.xml`
+1. **File > Import XML** → select `allianz_factsheet_indesign.xmp`
 2. The Structure panel will populate with the document tree
 3. Open the **Tags panel** → flyout menu → **Map Tags to Styles**
 4. Click **Map By Name** — this links all `aid:pstyle` tags to matching Paragraph Styles
